@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Titel deiner Website -->
+  <title>$MGGA - Official Website</title>
+
+  <!-- Meta Description für SEO und Vorschautext -->
+  <meta name="description" content="Only Official $MGGA Website. Join our Memecoin Revolution and be part of the Make Germany Great Again - MGGA Movement." />
+
+  <!-- (Optional) Meta Keywords (wird von vielen Suchmaschinen allerdings kaum noch beachtet) -->
+  <meta name="keywords" content="MGGA, $MGGA, Movement, Make Germany Great Again" />
+
+  <!-- Social Media / Open Graph Tags (für bessere Darstellung beim Teilen) -->
+  <meta property="og:title" content="$MGGA - Official Website" />
+  <meta property="og:description" content="The official Website for $MGGA. Join the Movement and Make Germany Great Again!" />
+  <meta property="og:image" content="https://mgga.meme/mggatoken-logo.png" />
+  <meta property="og:url" content="https://mgga.meme" />
+
+  <!-- (Optional) Favicon -->
+  <link rel="icon" href="mggatoken-logo.png" type="image/png" />
+
+  <!-- Verknüpfung zu deinem CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+<!-- Container für den Klick-Effekt (verhindert Null-Fehler) -->
+<div id="click-effect-container"></div>
+
+<!-- Desktop-Navbar -->
+<nav class="navbar">
+  <!-- Wrapper, der Logo + rotierendes Deko-Element enthält -->
+  <div class="nav-logo-wrapper">
+    <!-- Rotierendes Element (Deko) -->
+    <div class="nav-logo-decor"></div>
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="index.html" class="home-button">
+        <img src="mggatoken-logo.png" alt="Home Icon">
+      </a>
+    </div>
+  </div>
+
+  <!-- Desktop-Links -->
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="https://forms.gle/7jvLw4tF2WG5GSCk6" target="_blank" rel="noopener noreferrer">Ambassador-System</a></li>
+    <li><a href="#home">Presale</a></li>
+    <li><a href="#home">FAQ - Wiki<br>(Following)</a></li>
+    <li><a href="#home">Whitepaper<br>(Following)</a></li>
+  </ul>
+
+<!-- Desktop-Icons -->
+<div class="nav-icons">
+  <a href="https://t.me/mggasolana" target="_blank" rel="noopener noreferrer" class="icon-card">
+    <img src="telegram.png" alt="Telegram">
+  </a>
+  <a href="https://x.com/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+    <img src="twitter.png" alt="Twitter">
+  </a>
+  <a href="https://www.instagram.com/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+    <img src="instagram.png" alt="Instagram">
+  </a>
+</div>
+
+  <!-- Desktop-Countdown -->
+  <div class="countdown-container">
+    <span class="countdown-text">Starting in:</span>
+    <span id="countdown" class="countdown-timer"></span>
+  </div>
+</nav>
+
+<!-- Mobile-only Navbar -->
+<nav class="navbar-mobile">
+  <div class="top-bar">
+    <!-- Logo + Deko (ggf. kleiner als Desktop) -->
+    <div class="nav-logo-wrapper-mobile">
+      <div class="nav-logo-decor-mobile"></div>
+      <div class="nav-logo-mobile">
+        <a href="index.html" class="home-button-mobile">
+          <img src="mggatoken-logo.png" alt="Home Icon" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile-Icons -->
+    <div class="mobile-nav-icons">
+      <a href="https://t.me/mggasolana" target="_blank" rel="noopener noreferrer" class="icon-card">
+        <img src="telegram.png" alt="Telegram">
+      </a>
+      <a href="https://x.com/mggasolmeme" target="_blank" rel="noopener noreferrer">
+        <img src="twitter.png" alt="Twitter">
+      </a>
+      <a href="https://www.instagram.com/mggasolmeme" target="_blank" rel="noopener noreferrer">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+
+    <!-- Hamburger (öffnet UL) -->
+    <div class="mobile-hamburger" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div><!-- .top-bar -->
+
+<!-- Ausklappbare Mobile-Links -->
+<ul class="mobile-nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="https://forms.gle/7jvLw4tF2WG5GSCk6" target="_blank" rel="noopener noreferrer">Ambassador-System</a></li>
+  <li><a href="#home">FAQ - Wiki<br>(Following)</a></li>
+  <li><a href="#home">Whitepaper<br>(Following)</a></li>
+  <li class="with-mobile-countdown">
+      <a href="#home">Presale</a>
+      <div class="mobile-presale-countdown">
+          <span class="countdown-text">Starting in:</span>
+          <span id="countdown-mobile-presale"></span>
+      </div>
+  </li>
+</ul>
+</nav>
+
+<!-- Desktop-Bereich / große Hintergrundbilder -->
+<div class="large-image-section">
+  <div class="large-background"></div>
+  <div class="another-large-image"></div>
+
+</div>
+
+<!-- Mobile-Only Background Sections -->
+<section class="mobile-bg-1">
+  <div class="countdown-container-mobile">
+    <span class="countdown-text">Presale starting in:</span>
+    <span id="countdown-mobile" class="countdown-timer"></span>
+  </div>
+</section>
+<section class="mobile-bg-2"></section>
+<section class="mobile-bg-3"></section>
+
+<!-- Tablet-Only Background Sections -->
+<section class="tablet-bg-1"></section>
+<section class="tablet-bg-2"></section>
+<section class="tablet-bg-3"></section>
+
+
+<!-- Deine NEUE Sektion mit den ganzen Grafiken -->
+<section class="icon-section">
+  <div class="icon-grid">
+ <!-- 1) Coinmarketcap -->
+ <a href="#icon-section" class="icon-card">
+  <img src="coinmarketcap.png" alt="CoinMarketCap Logo" />
+</a>
+
+<!-- 2) Coingecko -->
+<a href="#icon-section" class="icon-card">
+  <img src="coingecko.png" alt="CoinGecko Logo" />
+</a>
+
+<!-- 3) Dexscreener -->
+<a href="#icon-section" class="icon-card">
+  <img src="dexscreener.png" alt="Dexscreener Logo" />
+</a>
+
+<!-- 4) Birdeye -->
+<a href="#icon-section" class="icon-card">
+  <img src="birdeye.png" alt="BirdEye Logo" />
+</a>
+
+<!-- 5) Solscan -->
+<a href="#icon-section" class="icon-card">
+  <img src="solscan.png" alt="Solscan Logo" />
+</a>
+
+<!-- 6) Dextools -->
+<a href="#icon-section" class="icon-card">
+  <img src="dextools.png" alt="Dextools Logo" />
+</a>
+
+<!-- 7) Coinvote -->
+<a href="#icon-section" class="icon-card">
+  <img src="coinvote.png" alt="CoinVote Logo" />
+</a>
+
+<!-- 8) Gemfinder -->
+<a href="#icon-section" class="icon-card">
+  <img src="gemfinder.png" alt="GemFinder Logo" />
+</a>
+
+<!-- 9) Coinscope -->
+<a href="#icon-section" class="icon-card">
+  <img src="coinscope.png" alt="CoinScope Logo" />
+</a>
+
+<!-- 10) Geckoterminal -->
+<a href="#icon-section" class="icon-card">
+  <img src="geckoterminal.png" alt="GeckoTerminal Logo" />
+</a>
+
+<!-- 11) Forbes -->
+<a href="#icon-section" class="icon-card">
+  <img src="forbes.png" alt="Forbes Logo" />
+</a>
+
+<!-- 12) Toptoken (zuvor top100.png) -->
+<a href="#icon-section" class="icon-card">
+  <img src="top100.png" alt="TopToken Logo" />
+</a>
+
+<!-- 13) Bubblemaps -->
+<a href="#icon-section" class="icon-card">
+  <img src="bubblemaps.png" alt="BubbleMaps Logo" />
+</a>
+
+<!-- 14) Rugcheck -->
+<a href="#icon-section" class="icon-card">
+  <img src="rugcheck.png" alt="RugCheck Logo" />
+</a>
+
+<!-- 15) Coinmun -->
+<a href="#icon-section" class="icon-card">
+  <img src="coinmun.png" alt="CoinMun Logo" />
+</a>
+
+<!-- 16) Jupiter -->
+<a href="#icon-section" class="icon-card">
+  <img src="jupiter.png" alt="Jupiter Logo" />
+</a>
+
+<!-- 17) Raydium -->
+<a href="#icon-section" class="icon-card">
+  <img src="raydium.png" alt="Raydium Logo" />
+</a>
+
+<!-- 18) Toplist -->
+<a href="#icon-section" class="icon-card">
+  <img src="toplist.png" alt="Toplist Logo" />
+</a>
+
+<!-- 19) Cryptorank -->
+<a href="#icon-section" class="icon-card">
+  <img src="cryptorank.png" alt="CryptoRank Logo" />
+</a>
+
+<!-- 20) Coinranking -->
+<a href="#icon-section" class="icon-card">
+  <img src="coinranking.png" alt="CoinRanking Logo" />
+</a>
+
+<!-- 21) Twitter2 -->
+<a href="https://x.com/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="twitter2.png" alt="Twitter2 Logo" />
+</a>
+
+<!-- 22) Telegram2 -->
+<a href="https://t.me/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="telegram2.png" alt="Telegram Logo" />
+</a>
+
+<!-- 28) Telegram4 -->
+<a href="https://t.me/mggasolmememeger" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="telegramde.png" alt="Telegram Logo" />
+</a>
+
+<!-- 23) Telegram3 -->
+<a href="https://t.me/mggasolana" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="telegram3.png" alt="Telegram Logo" />
+</a>
+
+<!-- 24) Instagram2 -->
+<a href="https://www.instagram.com/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="instagram2.png" alt="Instagram Logo" />
+</a>
+
+<!-- 25) Tiktok -->
+<a href="https://www.tiktok.com/@mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="tiktok.png" alt="TikTok Logo" />
+</a>
+
+<!-- 26) Reddit -->
+<a href="https://www.reddit.com/user/mggasolmeme" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="reddit.png" alt="Reddit Logo" />
+</a>
+
+<!-- 27) TruthSocial -->
+<a href="home" target="_blank" rel="noopener noreferrer" class="icon-card">
+  <img src="truthsocial.png" alt="TruthSocial Logo" />
+</a>
+  </div>
+</section>
+
+<section class="third-large-image"></section>
+
+<!-- Deine brennenden Gifs -->
+<img src="burnflame1.gif" alt="Floating GIF" class="floating-gif">
+<img src="burningflag1.gif" alt="Burning Flag" class="burningflag">
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <img 
+      src="desktop-footer-transparent-background.png"
+      alt="Footer Background"
+      class="footer-background"
+    >
+    
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="https://forms.gle/7jvLw4tF2WG5GSCk6" target="_blank" rel="noopener noreferrer">Ambassador-System</a></li>
+      <li><a href="#home">Presale</a></li>
+      <li><a href="#home">FAQ - Wiki<br>(Following)</a></li>
+      <li><a href="#home">Whitepaper<br>(Following)</a></li>
+    </ul>
+    
+    <div class="footer-disclaimer">
+      <p>
+        Disclaimer: Trading memecoins can be exciting, but it's not for everyone. 
+        The market is highly volatile, and there’s a chance you lose some or all 
+        of your investment. Only invest funds you’re prepared to lose.
+        <br><br>
+        $MGGA is a memecoin with no intrinsic value or expectation of financial return. 
+        $MGGA serves no functional purpose and exists purely for entertainment. 
+        <br>
+        Trading cryptocurrencies, particularly memecoins, involves significant risks, 
+        including potential capital loss due to market volatility.
+        <br><br>
+        By trading $MGGA (not online yet), you acknowledge and accept these terms. 
+        Additionally, this site and its content are not intended for residents of 
+        jurisdictions where such activity is restricted or prohibited by law.
+        <br><br>
+        Please note that the information provided on this site is not investment advice.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- Countdowns -->
+<script>
+function updateCountdown() {
+  const countdownElement = document.getElementById('countdown');
+  const countdownElementMobile = document.getElementById('countdown-mobile');
+  const targetDate = new Date('January 8, 2025 20:00:00 GMT+0100').getTime();
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+  const countdownText = `${days}d ${hours}h ${mins}m ${secs}s`;
+
+  // Desktop
+  if(countdownElement) {
+    countdownElement.innerHTML = countdownText;
+  }
+  // Alter mobiler Countdown in .mobile-bg-1
+  if(countdownElementMobile) {
+    countdownElementMobile.innerHTML = countdownText;
+  }
+
+  if(distance < 0) {
+    clearInterval(countdownInterval);
+    if(countdownElement) {
+      countdownElement.innerHTML = "Presale has started!";
+    }
+    if(countdownElementMobile) {
+      countdownElementMobile.innerHTML = "Presale has started!";
+    }
+  }
+}
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Mobiler Countdown in der Navbar
+function updateMobileCountdown() {
+  const targetDate = new Date('January 8, 2025 20:00:00 GMT+0100').getTime();
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if(distance < 0) {
+    document.getElementById('countdown-mobile-presale').innerHTML = "Presale has started!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000*60*60*24));
+  const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  const mins = Math.floor((distance % (1000*60*60)) / (1000*60));
+  const secs = Math.floor((distance % (1000*60)) / 1000);
+
+  document.getElementById('countdown-mobile-presale').innerHTML =
+    `${days}d ${hours}h ${mins}m ${secs}s`;
+}
+setInterval(updateMobileCountdown, 1000);
+</script>
+
+<!-- Klick-Effekt -->
+<script>
+document.body.addEventListener("click", (event) => {
+  const container = document.getElementById("click-effect-container");
+  if(!container) return;
+
+  for(let i=0; i<5; i++){
+    const img = document.createElement("img");
+    img.src = "mggatoken-logo.png";
+    img.classList.add("effect-logo");
+
+    const size = Math.random() * 50 + 30;
+    const randomX = Math.random() * 200 - 100;
+    const randomY = Math.random() * 200 - 100;
+    const rotation = Math.random() * 360;
+
+    img.style.width = `${size}px`;
+    img.style.left  = `${event.clientX}px`;
+    img.style.top   = `${event.clientY}px`;
+
+    container.appendChild(img);
+
+    setTimeout(()=>{
+      img.style.animation = `throw 1s ease-out forwards`;
+      img.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${rotation}deg)`;
+    },10);
+
+    setTimeout(()=>{
+      img.remove();
+    },1000);
+  }
+});
+</script>
+
+<!-- Mobile Menü Toggles -->
+<script>
+function toggleMobileMenu() {
+  const mobileNavbar = document.querySelector('.navbar-mobile');
+  mobileNavbar.classList.toggle('active');
+}
+
+document.addEventListener('click', (e) => {
+  const mobileNavbar = document.querySelector('.navbar-mobile');
+  const mobileHamburger = document.querySelector('.mobile-hamburger');
+  if(
+    mobileNavbar.classList.contains('active') &&
+    !mobileNavbar.contains(e.target) &&
+    !mobileHamburger.contains(e.target)
+  ){
+    mobileNavbar.classList.remove('active');
+  }
+});
+</script>
+
+
+
+</body>
+</html>

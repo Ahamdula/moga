@@ -1,0 +1,2359 @@
+/* Grundlegendes Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #08d0e4;
+    overflow-x: hidden; /* Verhindere horizontales Scrollen */
+}
+
+/* Navigationsleiste */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #08d0e4;
+    padding: 10px 175px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Nav-Logo-Container (neu hinzugefügt) */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Logo in der Navigation */
+.nav-logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Logo + rotierendes Deko-Element */
+.nav-logo-wrapper {
+    position: relative;
+}
+
+/* Das rotierende Element hinter dem Logo */
+.nav-logo-decor {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 125px;
+    height: 125px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.nav-logo-decor-mobile {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 60px; /* ggf. kleiner */
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .nav-logo-wrapper-mobile {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  .nav-logo-mobile img {
+    width: 60px; 
+    height: 60px;
+    position: relative;
+    z-index: 1; /* damit es über dem Decor liegt */
+  }
+  
+
+/* Links in der Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Neue CSS-Klasse für die Navigations-Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icons img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Such-Icon in der Navigation */
+.nav-search a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-search a:hover {
+    color: #ffcc00;
+}
+
+/* Home button specific styling */
+.home-button {
+    position: relative;
+    right: 0px;
+}
+
+/* Container für den Effekt */
+#click-effect-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2147483647; /* Höchstmöglicher z-index-Wert */
+}
+
+/* Effekt-Logos */
+.effect-logo {
+    position: absolute;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 1;
+    z-index: 100000;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Max width 376px */
+@media (max-width: 376px) {
+    .navbar {
+        padding: 25px;
+        padding-bottom: 25px;
+        left: -14px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #08d0e4;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-logo-decor {
+        width: 60px;
+        height: 60px;
+        left: 40px;
+        top: 40px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-icons {
+        position: absolute;
+        top: -01px;
+        left: 140px;
+        width: 140px;
+        height: 140px;
+        justify-content: center;
+        z-index: 999;
+    }
+}
+
+/* Min width 378px and max width 395px */
+@media (min-width: 377px) and (max-width: 395px) {
+    .navbar {
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #08d0e4;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav-logo-decor {
+        width: 70px;
+        height: 70px;
+        left: 45px;
+        top: 45px;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 9999;
+    }
+
+    .nav-icons {
+        position: absolute;
+        top: 37px;
+        left: 130px;
+        width: 100%;
+        justify-content: center;
+        z-index: 999;
+        margin-left: -105px;
+        margin-right: 70px;
+        padding-left:-100px;
+    }
+}
+
+/* Min width 396px and max width 440px */
+@media (min-width: 396px) and (max-width: 440px) {
+    .navbar {
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #08d0e4;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nav-logo-decor {
+        width: 80px;
+        height: 80px;
+        left: 50px;
+        top: 50px;
+    }
+
+    .hamburger {
+        display: flex;
+        padding-right: 20px;
+        z-index: 99999;
+    }
+
+    .nav-icons {
+        position: absolute;
+        top: 37px;
+        left: 125px;
+        width: 100%;
+        justify-content: center;
+        z-index: 999;
+        margin-left: -105px;
+        margin-right: 70px;
+        padding-left:-100px;
+    
+    }
+}
+
+/* Min width 441px and max width 768px */
+@media (min-width: 441px) and (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #08d0e4;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .nav-logo-decor {
+        width: 90px;
+        height: 90px;
+        left: 55px;
+        top: 55px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-icons {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        z-index: 999;
+    }
+}
+
+/* Min width 769px */
+@media (min-width: 769px) {
+    .navbar {
+        padding: 65px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        z-index: auto;
+    }
+
+    .nav-links li {
+        text-align: left;
+        margin: 0 15px; /* Add some horizontal margin to space out the links */
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .nav-logo-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-logo {
+        position: absolute;
+        z-index: 1; /* Ensure the logo is above the decor */
+    }
+
+    .nav-logo img {
+        width: 150px;
+        height: 150px;
+        margin-left: 350px;
+    }
+
+    .nav-logo-decor {
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        z-index: 0; /* Ensure the decor is behind the logo */
+        margin-left: 165px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-icons {
+        position: static;
+        justify-content: flex-end;
+    }
+
+    .nav-icons img {
+        width: 70px; /* Increase the width */
+        height: 70px; /* Increase the height */
+    }
+
+    .countdown-container {
+        display: flex;
+        position: absolute;
+        top: 75%; /* Position below the navbar */
+        left: 50%;
+        transform: translate(-52.6%, -100%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+}
+
+/* Toggle the menu when the hamburger is clicked */
+.navbar.active .nav-links {
+    display: flex;
+}
+
+.navbar.active .nav-icons {
+    display: flex;
+}
+
+
+/* GIF styling */
+.floating-gif {
+    position: absolute;
+    top: 276px;
+    left: 530px;
+    width: 348px;
+    height: 348px;
+    z-index: 10;
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+    .floating-gif {
+        top: 100px;
+        left: 60px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .floating-gif {
+        top: 100px;
+        left: 20px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Existing background and floating-gif rules... */
+
+/* New GIF styling */
+.burningflag {
+    position: absolute;
+    top: 965.3px;
+    left: 80px;
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+    .burningflag {
+        top: 200px;
+        left: 100px;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .burningflag {
+        top: 150px;
+        left: 50px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+.large-image-section {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust as needed */
+}
+
+/* Only the large background image */
+.large-background {
+    background: url('desktop-final-new-main-background.png') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 6500px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* The “another-large-image” behind the .icon-section */
+.another-large-image {
+    background: url('desktop-final-second-background.png') no-repeat center top;
+    background-size: cover;
+    position: absolute;
+    top: 6600px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* Hide the desktop images */
+    .large-background,
+    .another-large-image,
+    .third-large-image {
+        display: none;
+    }
+
+    /* Reposition the GIFs for mobile */
+    .floating-gif {
+        top: 515px;
+        left: 170px;
+        width: 150px;
+        height: 150px;
+    }
+    .burningflag {
+        top: 1745.5px; /* adjust to your needs */
+        left: 40px;
+        width: 95px;
+        height: 95px;
+    }
+}
+
+/* Hide mobile images by default */
+.large-background-mobile,
+.another-large-image-mobile,
+.third-large-image-mobile {
+    display: none;
+}
+
+
+
+
+/* Max width 376px */
+@media (max-width: 376px) {
+    .floating-gif {
+        top: 518px;
+        left: 170px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .burningflag {
+        top: 1747.8px;
+        left: 40px;
+        width: 95px;
+        height: 95px;
+    }
+}
+
+/* Min width 377px and max width 395px */
+@media (min-width: 377px) and (max-width: 395px) {
+    .floating-gif {
+        top: 583px;
+        left: 175px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .burningflag {
+        top: 1858.5px;
+        left: 35px;
+        width: 115px;
+        height: 115px;
+    }
+}
+
+/* Min width 396px and max width 440px */
+@media (min-width: 396px) and (max-width: 440px) {
+    .floating-gif {
+        top: 764px;
+        left: 200px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .burningflag {
+        top: 2158.3px;
+        left: 40px;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Min width 441px and max width 768px */
+@media (min-width: 441px) and (max-width: 768px) {
+    .floating-gif {
+        top: 600px;
+        left: 200px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .burningflag {
+        top: 2100px;
+        left: 50px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+
+/* Erst mal sicherstellen, dass Desktop-Bilder ausgeblendet sind,
+   wenn du für Mobile separate Hintergründe benutzt */
+
+   @media (max-width: 600px) {
+    .large-background,
+    .another-large-image {
+        display: none; /* Desktop-Hintergründe ausblenden */
+    }
+
+    /* 1. Hintergrund: 375 x 4000 px */
+    .mobile-bg-1 {
+        background: url("mobile-new-main-background.png") no-repeat center top;
+        background-size: cover; /* oder contain, je nach gewünschtem Effekt */
+        width: 375px;
+        height: 4000px;
+        margin: 0 auto; /* Zentriert es horizontal */
+    }
+
+    /* 2. Hintergrund: 375 x 1250 px */
+    .mobile-bg-2 {
+        background: url("mobile-new-second-background.png") no-repeat center top;
+        background-size: cover;
+        width: 375px;
+        height: 1250px;
+        margin: 0 auto;
+        padding-bottom: 0; /* Remove padding-bottom */
+    }
+
+    /* 3. Hintergrund: 375 x 200 px */
+    .mobile-bg-3 {
+        background: url("mobile-new-third-background.png") no-repeat center top;
+        background-size: cover;
+        width: 375px;
+        height: 200px;
+        margin: 60px auto 0 auto; /* Add margin to the top only */
+        padding-top: 20px; /* Add padding to the top if needed */
+  
+        
+    }
+}
+
+.icon-section {
+    /* Im normalen Flow: z.B. zentriert, Abstand nach oben/unten */
+    margin: 0rem auto;
+    text-align: center;
+    max-width: 1920px; /* falls gewünscht */
+    background-color: #000000; /* Schwarzer Hintergrund */
+    z-index: 2147483646;
+    position: relative; /* Positionierung relativ zum übergeordneten Element */
+    top: 700px; /* Abstand nach unten erhöhen */
+    /* Optional: padding, etc. */
+}
+
+.icon-grid {
+    display: grid;
+    /* Die Spalten: repeat(auto-fill, minmax(150/200/220px, 1fr)) nach Geschmack */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+    /* Gap für die Spalten- und Zeilenabstände */
+    gap: 0.2rem;
+    row-gap: 0.1rem; /* Verringerte row-gap */
+    justify-items: center;
+    align-items: center;
+    
+    /* Für zentrierten Block */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.icon-card {
+    /* Gewünschtes Hover-Verhalten usw. */
+    transition: transform 0.3s ease;
+    max-width: 1; /* Begrenze die maximale Breite */
+    max-height: 100%; /* Begrenze die maximale Höhe */
+    z-index: 2147483647; /* Höchstmöglicher z-index-Wert */
+}
+
+.icon-card:hover {
+    transform: scale(1.05);
+}
+
+.icon-card img {
+    max-width: 250px;
+    max-height: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Media Queries */
+
+/* Max width 376px */
+@media (max-width: 376px) {
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.1rem; /* Adjust row-gap for small screens */
+    }
+
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3 {
+        
+        left: 0px; /* Adjust as needed */
+    }
+
+    .mobile-bg-1 {
+        padding-top: 1px;
+        margin-top: 2px;
+        top: 50px;
+    }
+
+    .mobile-bg-2 {
+        padding-top: 15px;
+        margin-top: 25px;
+        top: 60px;
+    }
+
+    .mobile-bg-3 {
+        padding: 0px;
+        margin-top: 30px;
+        top: 70px;
+    }
+
+    .icon-section {
+        margin-top: 0px; /* Adjust as needed */
+        padding-top: 0px; /* Adjust as needed */
+        top: 0px; /* Adjust as needed */
+        overflow-x: hidden;
+        margin-right: -0px;
+    }
+
+    .icon-card img {
+        max-width: 170px;
+        max-height: 170px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Min width 378px and max width 395px */
+@media (min-width: 378px) and (max-width: 395px) {
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.1rem; /* Adjust row-gap for medium-small screens */
+    }
+
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3 {
+        transform: scale(1.0411);
+        left: 15px; /* Adjust as needed */
+    }
+
+    .mobile-bg-1 {
+        padding-bottom: 15px;
+        margin-top: 135px;
+        margin-bottom: 10px;
+        top: 60px;
+    }
+
+    .mobile-bg-2 {
+        padding-right: 0px;
+        margin-top: 130px;
+        top: 70px;
+    }
+
+    .mobile-bg-3 {
+      
+        margin-top: 105px;
+        padding-left: 0px;
+        top: 80px;
+    }
+
+    .icon-section {
+        margin-top: 0px; /* Adjust as needed */
+        padding: 0px; /* Adjust as needed */
+        top: 0px; /* Adjust as needed */
+    }
+
+    .icon-card img {
+        max-width: 170px;
+        max-height: 170px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Min width 396px and max width 440px */
+@media (min-width: 396px) and (max-width: 440px) {
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.5rem; /* Adjust row-gap for medium screens */
+    }
+
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3 {
+        transform: scale(1.141);
+        left: 00px; /* Adjust as needed */
+    }
+
+    .mobile-bg-1 {
+        padding: 0px;
+        margin-top: 475px;
+        margin-right: 0px;
+        margin-left: 27.5px;
+        top: 70px;
+    }
+
+    .mobile-bg-2 {
+        padding: 0px;
+        margin-top: 420px;
+        margin-left: 23.5px;
+        margin-right: 0px;
+        top: 80px;
+    }
+
+    .mobile-bg-3 {
+        
+        margin-top: 200px;
+        padding-left: 5px;
+        margin-right: 0px;
+        margin-left: 23px;
+        top: 90px;
+   
+
+    }
+
+    .icon-section {
+        margin-top: 0px; /* Adjust as needed */
+        padding: 0px; /* Adjust as needed */
+        top: 0px; /* Adjust as needed */
+        left: 0px;
+        width: 430px;
+        
+    }
+
+    .icon-card img {
+        max-width: 195px;
+        max-height: 195px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 441px) and (max-width: 768px) {
+    .icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1rem; /* Adjust row-gap for tablet screens */
+    }
+
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3 {
+        transform: scale(1.25);
+        left: 25px; /* Adjust as needed */
+    }
+
+    .mobile-bg-1 {
+        padding: 25px;
+        margin-top: 35px;
+        top: 80px;
+    }
+
+    .mobile-bg-2 {
+        padding: 30px;
+        margin-top: 40px;
+        top: 90px;
+    }
+
+    .mobile-bg-3 {
+        padding: 35px;
+        margin-top: 45px;
+        top: 100px;
+    }
+
+    .icon-section {
+        margin-top: 70px; /* Adjust as needed */
+        padding: 25px; /* Adjust as needed */
+        top: 110px; /* Adjust as needed */
+    }
+}
+
+/* Desktop view */
+@media (min-width: 769px) {
+    .icon-grid {
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 1.5rem; /* Adjust row-gap for desktop screens */
+    }
+
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3 {
+        transform: scale(1.25);
+        left: 30px; /* Adjust as needed */
+    }
+
+    .mobile-bg-1 {
+        padding: 30px;
+        margin-top: 40px;
+        top: 90px;
+    }
+
+    .mobile-bg-2 {
+        padding: 35px;
+        margin-top: 45px;
+        top: 100px;
+    }
+
+    .mobile-bg-3 {
+        padding: 40px;
+        margin-top: 20px;
+        margin-bottom: 65px;
+        top: 110px;
+    }
+
+    .icon-section {
+        margin-top: 80px; /* Adjust as needed */
+        padding: 30px; /* Adjust as needed */
+        top: 250px; /* Adjust as needed */
+    }
+}
+
+
+
+/* Countdown Timer Styling */
+.countdown-container {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.countdown-text {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.countdown-timer {
+    color: red;
+    font-size: 2rem; /* Increase the font size for the numbers */
+    font-weight: bold;
+}
+
+/* Countdown Timer Styling for Mobile */
+.countdown-container-mobile {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+@media (max-width: 376px) {
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: -18px; /* Adjust as needed */
+        left: 110px; /* Adjust as needed */
+    }
+
+    .countdown-timer {
+        font-size: 1rem; /* Adjust the font size for the numbers */
+    }
+}
+
+@media (min-width: 377px) and (max-width: 395px) {
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: -70px; /* Adjust as needed */
+        left: 115px; /* Adjust as needed */
+    }
+    .countdown-timer {
+        font-size: 1rem; /* Adjust the font size for the numbers */
+    }
+}
+
+@media (min-width: 396px) and (max-width: 440px) {
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: -140px; /* Adjust as needed */
+        left: 65px; /* Adjust as needed */
+    }
+    .countdown-timer {
+        font-size: 2rem; /* Adjust the font size for the numbers */
+    }
+}
+@media (min-width: 441px) and (max-width: 768px) {
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: 160px; /* Adjust as needed */
+        left: 50px; /* Adjust as needed */
+    }
+}
+
+@media (min-width: 769px) {
+    .countdown-container-mobile {
+        display: none;
+    }
+
+    .countdown-container {
+        display: flex;
+    }
+}
+
+.navbar-mobile {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: #08d0e4;
+    position: relative;
+  }
+  
+  @media (max-width: 600px) {
+    .navbar { display: none !important; }
+    .navbar-mobile { display: flex !important; }
+  }
+  
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .mobile-nav-icons img {
+    width: 40px; height: 40px;
+    transition: transform 0.3s ease;
+  }
+  .mobile-nav-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .mobile-hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .mobile-hamburger span {
+    width: 25px; 
+    height: 3px; 
+    background-color: white;
+    margin: 4px 0;
+  }
+  
+  .mobile-nav-links {
+    display: none; /* erst ausklappen via .active */
+    flex-direction: column;
+    margin: 0; padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .mobile-nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .mobile-nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-mobile.active .mobile-nav-links {
+    display: flex;
+  }
+  .mobile-presale-countdown .countdown-text,
+  .mobile-presale-countdown #countdown-mobile-presale {
+    color: black; /* z. B. schwarz */
+    
+  }
+  
+  .navbar-mobile {
+    position: relative; /* Container muss "relative" sein, damit UL "absolute" positioniert werden kann */
+    
+  }
+  
+  .navbar-mobile.active .mobile-nav-links {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 470px;       /* fester Wert */
+    background-color: #08d0e4;
+    z-index: 9999;
+    flex-direction: column;
+    margin: 0; padding: 0;
+    overflow-y: auto;    /* scrollbar, falls mehr Links als 400px Platz */
+  }
+  
+
+  .nav-logo-mobile img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 1; /* damit es über dem Decor liegt */
+}
+
+.nav-logo-decor-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.countdown-container-mobile {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.mobile-hamburger {
+    margin-right: 10px; /* oder so */
+    position: absolute;
+    z-index: 999999;
+}
+
+.mobile-nav-icons {
+    gap: 10px;
+    position: absolute; /* Ensure the element is absolutely positioned */
+    margin-right: 5px;
+    height: 100px;
+    width: 180px;
+}
+
+.mobile-nav-icons img {
+    width: 150px; /* Default value */
+    height: 250px; /* Default value */
+}
+
+/* ========== 1) max-width: 376px ========== */
+@media (max-width: 376px) {
+    .nav-logo-wrapper-mobile {
+        width: 75px;  /* z.B. kleiner */
+        height: 75px;
+        margin-left: 5px;
+        left: 10px;
+    }
+
+    .nav-logo-mobile img {
+        width: 105px;
+        height: 105px;
+        top: -15px;
+        left: -13px;
+    }
+
+    .nav-logo-decor-mobile {
+        width: 75px;
+        height: 75px;
+    }
+
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        left: 205px; /* Adjust as needed */
+    }
+
+    .mobile-hamburger {
+        margin-right: 5px; 
+        right: 25px;
+        /* ggf. noch width/height anpassen, falls du willst */
+    }
+
+    .mobile-nav-icons {
+        gap: 5px;
+        width: 170px;
+        height: 120px;
+        top: 22px !important;
+        left: 130px;
+    }
+
+    .mobile-nav-icons img {
+        width: 50px; /* Adjust as needed */
+        height: 50px; /* Adjust as needed */
+        top: -50px;
+    }
+
+    .floating-gif {
+        top: 487px; /* Adjust as needed */
+        left: 170px; /* Adjust as needed */
+        width: 150px; /* Adjust as needed */
+        height: 150px; /* Adjust as needed */
+    }
+
+    .burningflag {
+        top: 1115px; /* Adjust as needed */
+        left: 20px; /* Adjust as needed */
+        width: 90px; /* Adjust as needed */
+        height: 90px; /* Adjust as needed */
+    }
+}
+
+/* ========== 2) min-width: 377px and max-width: 395px ========== */
+@media (min-width: 377px) and (max-width: 395px) {
+    .nav-logo-wrapper-mobile {
+        width: 55px;  /* minimal größer */
+        height: 55px;
+        margin-left: 8px;
+        right: -20px;
+        top: 10px;
+    }
+
+    .nav-logo-mobile img {
+        width: 105px;
+        height: 105px;
+        top: -25px;
+        left: -25px;
+        
+    }
+
+    .nav-logo-decor-mobile {
+        width: 70px;
+        height: 70px;
+    }
+
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: -40px; /* Adjust as needed */
+        left: 200px; /* Adjust as needed */
+    }
+
+    .mobile-hamburger {
+        margin-right: 8px; 
+        left: 340px;
+        top: 30px;
+    }
+
+    .mobile-nav-icons {
+        gap: 5px;
+        width: 170px;
+        height: 120px;
+        top: 22px !important;
+        left: 140px;
+    }
+
+    .mobile-nav-icons img {
+        width: 50px; /* Adjust as needed */
+        height: 50px; /* Adjust as needed */
+        top: -50px;
+    }
+
+    .floating-gif {
+        top: 533px; /* Adjust as needed */
+        left: 175px; /* Adjust as needed */
+        width: 160px; /* Adjust as needed */
+        height: 160px; /* Adjust as needed */
+    }
+
+    .burningflag {
+        top: 1196px; /* Adjust as needed */
+        left: 150px; /* Adjust as needed */
+        width: 100px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+    }
+}
+
+/* ========== 3) min-width: 396px and max-width: 440px ========== */
+@media (min-width: 396px) and (max-width: 440px) {
+    .nav-logo-wrapper-mobile {
+        width: 55px;  /* minimal größer */
+        height: 55px;
+        margin-left: 8px;
+        right: -20px;
+        top: 10px;
+    }
+
+    .nav-logo-mobile img {
+        width: 105px;
+        height: 105px;
+        top: -25px;
+        left: -25px;
+        
+    }
+
+    .nav-logo-decor-mobile {
+        width: 70px;
+        height: 70px;
+    }
+
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: -120px; /* Adjust as needed */
+        left: 70px; /* Adjust as needed */
+    }
+
+    .mobile-hamburger {
+        margin-right: 8px; 
+        left: 360px;
+        top: 30px;
+    }
+
+    .mobile-nav-icons {
+        gap: 5px;
+        width: 195px;
+        height: 120px;
+        top: 18px !important;
+        left: 140px;
+    }
+
+    .mobile-nav-icons img {
+        width: 60px; /* Adjust as needed */
+        height: 60px; /* Adjust as needed */
+        top: -50px;
+    }
+
+    .floating-gif {
+        top: 708px; /* Adjust as needed */
+        left: 185px; /* Adjust as needed */
+        width: 180px; /* Adjust as needed */
+        height: 180px; /* Adjust as needed */
+    }
+
+    .burningflag {
+        top: 1442px; /* Adjust as needed */
+        left: 150px; /* Adjust as needed */
+        width: 100px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+    }
+}
+
+/* ========== 4) min-width: 441px and max-width: 768px ========== */
+@media (min-width: 441px) and (max-width: 768px) {
+    .nav-logo-wrapper-mobile {
+        width: 65px;
+        height: 65px;
+        margin-left: 15px;
+    }
+
+    .nav-logo-mobile img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nav-logo-decor-mobile {
+        width: 65px;
+        height: 65px;
+    }
+
+    .countdown-container-mobile {
+        display: flex;
+        position: absolute;
+        top: 160px; /* Adjust as needed */
+        left: 50px; /* Adjust as needed */
+    }
+
+    .mobile-hamburger {
+        margin-right: 15px;
+    }
+
+    .mobile-nav-icons {
+        gap: 15px;
+        /* oder .mobile-nav-icons img { width: 40px; height: 40px; } */
+    }
+
+    .mobile-nav-icons img {
+        width: 45px; /* Adjust as needed */
+        height: 45px; /* Adjust as needed */
+    }
+
+    .floating-gif {
+        top: 40px; /* Adjust as needed */
+        left: 40px; /* Adjust as needed */
+        width: 110px; /* Adjust as needed */
+        height: 110px; /* Adjust as needed */
+    }
+
+    .burningflag {
+        top: 50px; /* Adjust as needed */
+        left: 50px; /* Adjust as needed */
+        width: 120px; /* Adjust as needed */
+        height: 120px; /* Adjust as needed */
+    }
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+.footer {
+    /* Kannst du anpassen, wenn du für Mobile / Tablet
+       einen anderen Hintergrund oder Padding willst. */
+    background-color: #000000; /* z. B. dunkles Grau */
+    /* KEINE feste Höhe hier! Das machen wir erst ab Desktop */
+    color: #fff;
+    padding: 0px; /* z. B. ein kleines Padding für Mobile */
+    box-sizing: border-box;
+    text-align: center; /* Standard-Ausrichtung */
+
+  }
+
+  @media (min-width: 1285px) {
+
+    /* ========================
+       1) FOOTER-GRUNDLAGEN
+       ======================== */
+    footer.footer {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      margin: 0 !important;
+      width: 100% !important;
+      height: 320px !important;
+      overflow: hidden !important;
+      background: none !important;  /* Weil du ja ein Hintergrundbild als <img> hast */
+    }
+  
+    .footer-container {
+      position: relative !important;
+      width: 100% !important;
+      height: 100% !important; /* 320px */
+      margin: 0 auto !important;
+      text-align: center !important;
+    }
+  
+    /* ========================
+       2) HINTERGRUND-BILD
+       ======================== */
+    .footer-background {
+      position: absolute !important;
+      background-color: #000;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important; /* = 320px */
+      z-index: 23213232;
+      margin: 0 !important;
+      padding: 0 !important;
+      object-fit: cover !important; 
+      /* (object-fit unterstützt <img> in modernen Browsern, 
+         sonst ggf. Hintergrundbild via CSS) */
+    }
+  
+    /* ========================
+       3) LINKS
+       ======================== */
+    .footer-links {
+      position: absolute !important;
+      z-index: 42424242;
+      bottom: 170px;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      
+      display: flex !important;
+      gap: 150px !important;     /* Abstand zwischen Links */
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .footer-links li {
+      display: inline-block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .footer-links a {
+      text-decoration: none !important;
+      color: white !important;
+      font-size: 1rem !important;
+      font-weight: bold !important;
+    }
+    .footer-links a:hover {
+      color: #ffcc00 !important;
+    }
+  
+    /* ========================
+       4) DISCLAIMER
+       ======================== */
+    .footer-disclaimer {
+      position: absolute !important;
+      z-index: 3 !important;
+      bottom: 0 !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+  
+      width: 100%!important;        /* oder 100%, je nach Bedarf */
+      max-width: 1920px !important; /* optional, um eine Obergrenze zu setzen */
+      margin: 0 !important;
+      padding: 10px !important;
+      box-sizing: border-box !important;
+  
+     
+      color: #fff !important;
+      height: auto !important;
+      overflow: visible !important;
+      text-align: center !important;
+      z-index: 312313213 !important;
+    }
+  
+    .footer-disclaimer p {
+      margin: 0 !important;
+      padding: 0 !important;
+      color: rgb(245, 248, 55) !important;
+      height: auto !important;
+      font-size: 0.8rem;
+      z-index: 312313213;
+    }
+  
+    /* ========================
+       5) THIRD LARGE IMAGE
+       ======================== */
+    .third-large-image {
+      /* Bleibt ganz normal im Fluss, 
+         sofern du kein absolutes Positioning nutzt */
+      position: relative !important; 
+      top: auto !important;
+      left: auto !important;
+  
+      width: 100% !important;
+      height: 800px !important;  /* oder auto, je nach Inhalt */
+      margin: 200px 0 0 0 !important; /* Abstand nach oben, falls gewünscht */
+      z-index: 1000000;
+  
+      /* Hintergrund */
+      background: url('desktop-final-third-background.png') 
+                  no-repeat center top !important;
+      background-size: cover !important;
+    }
+  
+    .icon-section {
+        margin-top: 320px;
+      }
+      .floating-gif {
+        width: 320px;
+        height: 320px;
+        top: 296px;
+        left: 530px;
+        position: absolute !important; /* Sicherstellen der absoluten Positionierung */
+        z-index: 100000 !important; /* Über anderen Elementen platzieren */
+    }
+
+    .burningflag {
+        width:300px;
+        height: 300px;
+        top: 1055px;
+        left: 50px !important;      /* Angepasstes Left */
+        position: absolute !important; /* Sicherstellen der absoluten Positionierung */
+        z-index: 100000 !important; /* Über anderen Elementen platzieren */
+    }
+
+}
+  
+  
+  
+/* Tablet and Mobile Footer */
+@media (max-width: 1300px) {
+    .footer {
+        background-color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 0; /* Entferne den negativen Margin */
+        height: auto; /* Höhe automatisch anpassen */
+    }
+
+    .footer-background {
+        display: none; /* Hintergrundbild auf mobilen Geräten ausblenden */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduzierter Abstand zwischen den Links */
+        padding: 0; /* Entferne Padding */
+        margin: 0; /* Entferne Margin */
+        position: static; /* Stelle sicher, dass keine absolute Positionierung angewendet wird */
+    }
+
+    .footer-links li {
+        display: block;
+    }
+
+    .footer-links a {
+        color: white;
+        text-align: center;
+        /* Optional: Füge eine maximale Breite hinzu, um die Links besser zu steuern */
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .footer-disclaimer {
+        color: white;
+        font-size: 0.8rem;
+        margin-top: 0; /* Entferne den oberen Margin */
+        text-align: center;
+        padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
+        width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
+        box-sizing: border-box; /* Inkludiere Padding in der Breite */
+        position: relative; /* Position relativ setzen */
+    }
+
+    /* Ensure the icon-section remains unchanged */
+.icon-section {
+    margin-top: 120px; /* Anpassung des oberen Abstands nach Bedarf */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Abstand zwischen den Icons */
+}
+}
+
+/* Tablet-Special: 601–809px */
+@media (min-width: 601px) and (max-width: 809px) {
+    .navbar {
+        padding: 20px 40px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .nav-logo-wrapper {
+        display: flex;
+        position: absolute;
+        top: 4px;
+        z-index: 100500;
+    }
+    .nav-logo-decor {
+        width: 55px;
+        height: 55px;
+        left: 45px;
+        top: 50px;
+        z-index: 100500;
+    }
+    .nav-logo img {
+        width: 90px; /* Beispiel */
+        height: 90px;
+        z-index: 10005050;
+        
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        list-style: none;
+        left: 70px;
+        top: 30px;
+       
+        
+    }
+    .nav-icons {
+        display: flex;
+        gap: 15px;
+        left: 15px;
+        top: 100px;
+        
+    }
+
+    .countdown-container {
+        color: #fff;
+        text-align: center;
+        margin: 0px;
+        z-index: 500000;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-top: 150px;
+        margin-left: 250px;
+    }
+
+    .floating-gif {
+        position: absolute;
+        top: 793px;
+        left: 370px;
+        height: 200px;
+        width: 200px;
+    }
+    .burningflag {
+        position: absolute;
+        top: 1633px;
+        left: 40px;
+    }
+
+    /* Hide Desktop & Mobile backgrounds */
+    .large-background,
+    .another-large-image,
+    .third-large-image,
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3,
+    .footer-background {
+        display: none !important;
+    }
+
+    /* Tablet-Hintergründe */
+    .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
+        display: block;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .tablet-bg-1 {
+        background-image: url("tablet-main-background.png");
+        width: 768px;
+        height: 5500px;
+    }
+    .tablet-bg-2 {
+        background-image: url("tablet-second-background.png");
+        width: 768px;
+        height: 1750px;
+    }
+    .tablet-bg-3 {
+        background-image: url("tablet-third-background.png");
+        width: 768px;
+        height: 350px;
+    }
+
+    /* Icon-Section */
+    .icon-section {
+        margin-top: 0;
+        top: 0;
+        padding: 20px;
+        position: static;
+    }
+    .icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+
+
+    .footer {
+        background-color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 0;
+        height: auto; /* Höhe automatisch anpassen */
+    }
+
+    .footer-background {
+        display: none; /* Hintergrundbild auf mobilen Geräten ausblenden */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduzierter Abstand zwischen den Links */
+        padding: 0; /* Entferne Padding */
+        margin: 0; /* Entferne Margin */
+        position: static; /* Stelle sicher, dass keine absolute Positionierung angewendet wird */
+    }
+
+    .footer-links li {
+        display: block;
+    }
+
+    .footer-links a {
+        color: white;
+        text-align: center;
+        /* Optional: Füge eine maximale Breite hinzu, um die Links besser zu steuern */
+        max-width: 200px;
+        width: 100%;
+    }
+
+.footer-disclaimer {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: -0px;
+    text-align: center;
+    padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
+    width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
+    box-sizing: border-box; /* Inkludiere Padding in der Breite */
+    position: relative; /* Position relativ setzen */
+}
+
+.footer-disclaimer p {
+    margin: 0; /* Entferne Standard-Margin */
+    margin-top: -150px;
+   
+    padding: 0; /* Entferne Standard-Padding */
+    color: white; /* Textfarbe sicherstellen */
+    display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
+    visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
+    width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
+    height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+}
+}
+
+/* Tablet-Special: 810–1000px */
+@media (min-width: 810px) and (max-width: 1000px) {
+    body {
+        transform: scale(1.08);
+        transform-origin: top center; /* Skalierung vom oberen Zentrum aus */
+        width: 100vw; /* Volle Breite */
+        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    }
+
+    .navbar {
+        padding: 20px 40px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .nav-logo-wrapper {
+        display: flex;
+        position: relative;
+        top: -75px;
+        left: -100px;
+    }
+    .nav-logo-decor {
+        width: 75px; /* Beispiel */
+        height: 75px;
+    }
+    .nav-logo img {
+        width: 150px;
+        height: 150px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        justify-content: center;
+        list-style: none;
+        z-index: 5000000;
+    }
+    .nav-icons {
+        display: flex;
+        gap: 18px;
+        margin-top: 0px;
+        margin-bottom: 150px;
+        z-index: 499999;
+        margin-right: 30px;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 5000000;
+        height: 38px;
+        width: 38px;
+    }
+    .hamburger div {
+        width: 22px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    .countdown-container {
+        color: #fff;
+        text-align: center;
+        margin: 18px auto;
+    }
+
+    .floating-gif {
+        position: absolute;
+        top: 774px;
+        left: 375px;
+        width: 255px;
+        height: 255px;
+    }
+    .burningflag {
+        position: absolute;
+        top: 1621px;
+        left: 50px;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Hide Desktop & Mobile backgrounds */
+    .large-background,
+    .another-large-image,
+    .third-large-image,
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3,
+    .footer-background {
+        display: none !important;
+    }
+
+    /* Tablet-Hintergründe */
+    .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
+        display: block;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .tablet-bg-1 {
+        background-image: url("tablet-main-background.png");
+        width: 768px;
+        height: 5500px;
+    }
+    .tablet-bg-2 {
+        background-image: url("tablet-second-background.png");
+        width: 768px;
+        height: 1750px;
+    }
+    .tablet-bg-3 {
+        background-image: url("tablet-third-background.png");
+        width: 768px;
+        height: 350px;
+    }
+
+    /* Icon-Section */
+    .icon-section {
+        margin-top: -50px;
+        top: 0;
+        padding-bottom: 20px;
+        position: static;
+    }
+    .icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Horizontale Ausrichtung */
+    flex-wrap: nowrap; /* Kein Umbruch */
+    justify-content: center;
+    gap: 30px; /* Abstand zwischen den Links */
+    width: 100%; /* Volle Breite */
+    height: auto; /* Höhe automatisch anpassen */
+    margin-top: -10px;
+   
+}
+.footer-links li {
+    display: inline-block; /* Sicherstellen, dass die Listenelemente inline-block sind */
+    text-align: center; /* Zentriert den Text innerhalb der Listenelemente */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+    .footer-disclaimer {
+        color: white;
+        font-size: 0.6rem;
+        margin-top: 0; /* Entferne den oberen Margin */
+        text-align: center;
+        padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
+        width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
+        box-sizing: border-box; /* Inkludiere Padding in der Breite */
+        position: relative; /* Position relativ setzen */
+    }
+    
+    .footer-disclaimer p {
+        margin: 0; /* Entferne Standard-Margin */
+        margin-top: 10px;
+        margin-bottom: 330px;
+        padding: 0; /* Entferne Standard-Padding */
+        color: rgb(245, 248, 55); /* Textfarbe sicherstellen */
+        display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
+        visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
+        width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
+        height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+    }
+    
+/* Tablet-Special: 1001–1200px */
+@media (min-width: 1001px) and (max-width: 1200px) {
+    body {
+        transform: scale(1.34);
+        transform-origin: top center; /* Skalierung vom oberen Zentrum aus */
+        width: 100vw; /* Volle Breite */
+        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    }
+    .navbar {
+        padding: 20px 40px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .nav-logo-wrapper {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+    .nav-logo-decor {
+        width: 50px; /* Beispiel */
+        height: 50px;
+        left: -10px;
+        
+    }
+    .nav-logo {
+        display: flex;
+        left: -240px;
+    }
+    .nav-logo img {
+        width: 90px; /* Beispiel */
+        height: 90px;
+        left: -50px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        list-style: none;
+    }
+    .nav-icons {
+        display: flex;
+        gap: 20px;
+        top: 70px;
+        height: 50;
+        margin-bottom: -150px;
+        margin-right: 150px;
+    
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 5000000;
+        height: 40px;
+        width: 40px;
+    }
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    .countdown-container {
+        color: #fff;
+        text-align: center;
+        margin: 20px auto;
+        top: 200px;
+        left: 210px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .floating-gif {
+        position: absolute;
+        top: 621px;
+        left: 497px;
+        height: 220px;
+        width: 220px;
+    }
+    .burningflag {
+        position: absolute;
+        top: 1426px;
+        left: 130px;
+        height: 175px;
+        width: 175px;
+    }
+
+    /* Hide Desktop & Mobile backgrounds */
+    .large-background,
+    .another-large-image,
+    .third-large-image,
+    .mobile-bg-1,
+    .mobile-bg-2,
+    .mobile-bg-3,
+    .footer-background {
+        display: none !important;
+    }
+
+    /* Tablet-Hintergründe */
+    .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
+        display: block;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .tablet-bg-1 {
+        background-image: url("tablet-main-background.png");
+        width: 768px;
+        height: 5500px;
+    }
+    .tablet-bg-2 {
+        background-image: url("tablet-second-background.png");
+        width: 768px;
+        height: 1750px;
+    }
+    .tablet-bg-3 {
+        background-image: url("tablet-third-background.png");
+        width: 768px;
+        height: 350px;
+    }
+
+
+
+/* Icon-Section */
+.icon-section {
+    margin-top: -50px;
+    top: 0;
+    padding-bottom: 20px;
+    position: static;
+}
+.icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: row; /* Horizontale Ausrichtung */
+flex-wrap: nowrap; /* Kein Umbruch */
+justify-content: center;
+gap: 30px; /* Abstand zwischen den Links */
+width: 100%; /* Volle Breite */
+height: auto; /* Höhe automatisch anpassen */
+margin-top: -10px;
+
+}
+.footer-links li {
+display: inline-block; /* Sicherstellen, dass die Listenelemente inline-block sind */
+text-align: center; /* Zentriert den Text innerhalb der Listenelemente */
+}
+
+.footer-links a {
+text-decoration: none;
+color: white;
+font-size: 1rem;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+color: #ffcc00;
+}
+.footer-disclaimer {
+    color: white;
+    font-size: 0.6rem;
+    margin-top: 0; /* Entferne den oberen Margin */
+    text-align: center;
+    padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
+    width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
+    box-sizing: border-box; /* Inkludiere Padding in der Breite */
+    position: relative; /* Position relativ setzen */
+}
+
+.footer-disclaimer p {
+    margin: 0; /* Entferne Standard-Margin */
+    margin-top: 10px;
+    margin-bottom: 450px;
+    padding: 0; /* Entferne Standard-Padding */
+    color: rgb(245, 248, 55); /* Textfarbe sicherstellen */
+    display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
+    visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
+    width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
+    height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+}
+
+}
+
+/* ======================================
+   FUSSTEIL (FOOTER) - NUR FÜR MOBILE
+   ====================================== */
+   @media (max-width: 600px) {
+
+    /* 1) Footer selbst: keine feste Höhe, kein Hintergrundbild */
+    .footer {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important; /* oder center, je nach Geschmack */
+      padding: 0 !important;
+      margin: 0 !important;
+      height: auto !important; /* passt sich dem Inhalt an */
+      background: #000 !important; /* wenn du’s Schwarz haben willst */
+    }
+  
+    /* 2) Hintergrundbild ausblenden */
+    .footer-background {
+      display: none !important;
+    }
+  
+    /* 3) Links vertikal statt horizontal */
+    .footer-links {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 10px !important; /* Abstand zwischen Links */
+      list-style: none !important;
+      margin: 10px 0 !important;
+      padding: 0 !important;
+      position: static !important; 
+      width: auto !important;
+    }
+    .footer-links li {
+      display: block !important; /* jeder Link block-weit */
+      width: 100% !important;
+      text-align: center !important;
+    }
+    .footer-links a {
+      text-decoration: none !important;
+      color: white !important;
+      font-size: 1rem !important;
+      font-weight: bold !important;
+    }
+  
+    /* 4) Disclaimer einfach unter den Links, vollbreit */
+    .footer-disclaimer {
+      position: static !important;   /* kein absolute */
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding: 10px 20px !important;
+      box-sizing: border-box !important;
+      color: #fff !important;
+      text-align: center !important;
+      font-size: 0.8rem !important;
+      background-color: #000 !important;
+    }
+    .footer-disclaimer p {
+      margin: 0 !important;
+      padding: 0 !important;
+      color: rgb(245, 248, 55) !important; 
+      line-height: 1.4 !important; /* etwas angenehmer zu lesen */
+    }
+  /* 5) Icon-Section: margin-top steuerbar */
+  .icon-section {
+    margin-top: -20px;
+  }
+}
