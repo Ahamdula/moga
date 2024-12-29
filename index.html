@@ -4,41 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <!-- Titel deiner Website -->
+
   <title>$MGGA - Official Website</title>
 
-  <!-- Meta Description für SEO und Vorschautext -->
+
   <meta name="description" content="Only Official $MGGA Website. Join our Memecoin Revolution and be part of the Make Germany Great Again - MGGA Movement." />
 
-  <!-- (Optional) Meta Keywords (wird von vielen Suchmaschinen allerdings kaum noch beachtet) -->
+
   <meta name="keywords" content="MGGA, $MGGA, Movement, Make Germany Great Again" />
 
-  <!-- Social Media / Open Graph Tags (für bessere Darstellung beim Teilen) -->
   <meta property="og:title" content="$MGGA - Official Website" />
   <meta property="og:description" content="The official Website for $MGGA. Join the Movement and Make Germany Great Again!" />
   <meta property="og:image" content="https://mgga.meme/mggapreview.png" />
   <meta property="og:url" content="https://mgga.meme" />
 
-  <!-- (Optional) Favicon -->
+
   <link rel="icon" href="mggatokenlogo-bigi.png" type="image/png" />
 
-  <!-- Verknüpfung zu deinem CSS -->
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 
 
-<!-- Container für den Klick-Effekt (verhindert Null-Fehler) -->
+
 <div id="click-effect-container"></div>
 
-<!-- Desktop-Navbar -->
+
 <nav class="navbar">
-  <!-- Wrapper, der Logo + rotierendes Deko-Element enthält -->
+
   <div class="nav-logo-wrapper">
-    <!-- Rotierendes Element (Deko) -->
+
     <div class="nav-logo-decor"></div>
-    <!-- Logo -->
+
     <div class="nav-logo">
       <a href="index.html" class="home-button">
         <img src="mggatoken-logo.png" alt="Home Icon">
@@ -78,7 +77,7 @@
 <!-- Mobile-only Navbar -->
 <nav class="navbar-mobile">
   <div class="top-bar">
-    <!-- Logo + Deko (ggf. kleiner als Desktop) -->
+
     <div class="nav-logo-wrapper-mobile">
       <div class="nav-logo-decor-mobile"></div>
       <div class="nav-logo-mobile">
@@ -101,7 +100,7 @@
       </a>
     </div>
 
-    <!-- Hamburger (öffnet UL) -->
+
     <div class="mobile-hamburger" onclick="toggleMobileMenu()">
       <span></span>
       <span></span>
@@ -109,7 +108,7 @@
     </div>
   </div><!-- .top-bar -->
 
-<!-- Ausklappbare Mobile-Links -->
+
 <ul class="mobile-nav-links">
   <li><a href="#home">Home</a></li>
   <li><a href="https://forms.gle/7jvLw4tF2WG5GSCk6" target="_blank" rel="noopener noreferrer">Ambassador-System</a></li>
@@ -125,7 +124,7 @@
 </ul>
 </nav>
 
-<!-- Desktop-Bereich / große Hintergrundbilder -->
+
 <div class="large-image-section">
   <div class="large-background"></div>
   <div class="another-large-image"></div>
@@ -148,7 +147,7 @@
 <section class="tablet-bg-3"></section>
 
 
-<!-- Deine NEUE Sektion mit den ganzen Grafiken -->
+
 <section class="icon-section">
   <div class="icon-grid">
  <!-- 1) Coinmarketcap -->
@@ -295,7 +294,7 @@
 
 <section class="third-large-image"></section>
 
-<!-- Deine brennenden Gifs -->
+
 <img src="burnflame1.gif" alt="Floating GIF" class="floating-gif">
 <img src="burningflag1.gif" alt="Burning Flag" class="burningflag">
 
@@ -379,7 +378,7 @@ function updateCountdown() {
 }
 const countdownInterval = setInterval(updateCountdown, 1000);
 
-// Mobiler Countdown in der Navbar
+
 function updateMobileCountdown() {
   const targetDate = new Date('January 8, 2025 20:00:00 GMT+0100').getTime();
   const now = new Date().getTime();
@@ -401,7 +400,7 @@ function updateMobileCountdown() {
 setInterval(updateMobileCountdown, 1000);
 </script>
 
-<!-- Klick-Effekt -->
+
 <script>
 document.body.addEventListener("click", (event) => {
   const container = document.getElementById("click-effect-container");
@@ -435,7 +434,7 @@ document.body.addEventListener("click", (event) => {
 });
 </script>
 
-<!-- Mobile Menü Toggles -->
+
 <script>
 function toggleMobileMenu() {
   const mobileNavbar = document.querySelector('.navbar-mobile');
