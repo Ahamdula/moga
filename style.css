@@ -1,13 +1,13 @@
-/* Grundlegendes Styling */
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #08d0e4;
-    overflow-x: hidden; /* Verhindere horizontales Scrollen */
+    overflow-x: hidden; 
 }
 
-/* Navigationsleiste */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -18,14 +18,14 @@ body {
     position: relative;
 }
 
-/* Nav-Logo-Container (neu hinzugefügt) */
+
 .nav-logo {
     display: flex;
     align-items: center;
     margin-right: 20px;
 }
 
-/* Logo in der Navigation */
+
 .nav-logo img {
     width: 150px;
     height: 150px;
@@ -35,12 +35,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Logo + rotierendes Deko-Element */
+
 .nav-logo-wrapper {
     position: relative;
 }
 
-/* Das rotierende Element hinter dem Logo */
+
 .nav-logo-decor {
     position: absolute;
     top: 50%;
@@ -67,7 +67,7 @@ body {
 .nav-logo-decor-mobile {
     position: absolute;
     top: 50%; left: 50%;
-    width: 60px; /* ggf. kleiner */
+    width: 60px; 
     height: 60px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -85,11 +85,11 @@ body {
     width: 60px; 
     height: 60px;
     position: relative;
-    z-index: 1; /* damit es über dem Decor liegt */
+    z-index: 1; 
   }
   
 
-/* Links in der Navigation */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -114,7 +114,7 @@ body {
     color: #ffcc00;
 }
 
-/* Neue CSS-Klasse für die Navigations-Icons */
+
 .nav-icons {
     display: flex;
     align-items: center;
@@ -132,7 +132,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Such-Icon in der Navigation */
+
 .nav-search a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -144,13 +144,13 @@ body {
     color: #ffcc00;
 }
 
-/* Home button specific styling */
+
 .home-button {
     position: relative;
     right: 0px;
 }
 
-/* Container für den Effekt */
+
 #click-effect-container {
     position: fixed;
     top: 0;
@@ -159,10 +159,10 @@ body {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    z-index: 2147483647; /* Höchstmöglicher z-index-Wert */
+    z-index: 2147483647; 
 }
 
-/* Effekt-Logos */
+
 .effect-logo {
     position: absolute;
     transition: transform 1s ease, opacity 1s ease;
@@ -170,7 +170,7 @@ body {
     z-index: 100000;
 }
 
-/* Hamburger Menu Icon */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -185,7 +185,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Max width 376px */
+
 @media (max-width: 376px) {
     .navbar {
         padding: 25px;
@@ -241,7 +241,7 @@ body {
     }
 }
 
-/* Min width 378px and max width 395px */
+
 @media (min-width: 377px) and (max-width: 395px) {
     .navbar {
         padding: 15px;
@@ -298,7 +298,7 @@ body {
     }
 }
 
-/* Min width 396px and max width 440px */
+
 @media (min-width: 396px) and (max-width: 440px) {
     .navbar {
         padding: 10px;
@@ -357,7 +357,7 @@ body {
     }
 }
 
-/* Min width 441px and max width 768px */
+
 @media (min-width: 441px) and (max-width: 768px) {
     .navbar {
         padding: 10px;
@@ -410,7 +410,7 @@ body {
     }
 }
 
-/* Min width 769px */
+
 @media (min-width: 769px) {
     .navbar {
         padding: 65px;
@@ -430,7 +430,7 @@ body {
 
     .nav-links li {
         text-align: left;
-        margin: 0 15px; /* Add some horizontal margin to space out the links */
+        margin: 0 15px; 
     }
 
     .nav-links a {
@@ -446,7 +446,7 @@ body {
 
     .nav-logo {
         position: absolute;
-        z-index: 1; /* Ensure the logo is above the decor */
+        z-index: 1; 
     }
 
     .nav-logo img {
@@ -459,7 +459,7 @@ body {
         position: absolute;
         width: 125px;
         height: 125px;
-        z-index: 0; /* Ensure the decor is behind the logo */
+        z-index: 0; 
         margin-left: 165px;
     }
 
@@ -473,14 +473,14 @@ body {
     }
 
     .nav-icons img {
-        width: 70px; /* Increase the width */
-        height: 70px; /* Increase the height */
+        width: 70px; 
+        height: 70px; 
     }
 
     .countdown-container {
         display: flex;
         position: absolute;
-        top: 75%; /* Position below the navbar */
+        top: 75%; 
         left: 50%;
         transform: translate(-52.6%, -100%);
         flex-direction: column;
@@ -493,7 +493,7 @@ body {
     }
 }
 
-/* Toggle the menu when the hamburger is clicked */
+
 .navbar.active .nav-links {
     display: flex;
 }
@@ -503,7 +503,7 @@ body {
 }
 
 
-/* GIF styling */
+
 .floating-gif {
     position: absolute;
     top: 276px;
@@ -513,7 +513,7 @@ body {
     z-index: 10;
 }
 
-/* Tablet view */
+
 @media (max-width: 992px) {
     .floating-gif {
         top: 100px;
@@ -523,7 +523,7 @@ body {
     }
 }
 
-/* Mobile view */
+
 @media (max-width: 600px) {
     .floating-gif {
         top: 100px;
@@ -533,9 +533,9 @@ body {
     }
 }
 
-/* Existing background and floating-gif rules... */
 
-/* New GIF styling */
+
+
 .burningflag {
     position: absolute;
     top: 965.3px;
@@ -545,7 +545,7 @@ body {
     z-index: 10;
 }
 
-/* Tablet view */
+
 @media (max-width: 992px) {
     .burningflag {
         top: 200px;
@@ -555,7 +555,7 @@ body {
     }
 }
 
-/* Mobile view */
+
 @media (max-width: 600px) {
     .burningflag {
         top: 150px;
@@ -570,10 +570,10 @@ body {
 .large-image-section {
     position: relative;
     width: 100%;
-    height: 100%; /* Adjust as needed */
+    height: 100%; 
 }
 
-/* Only the large background image */
+
 .large-background {
     background: url('desktop-final-new-main-background.png') no-repeat center top;
     background-size: cover;
@@ -583,7 +583,7 @@ body {
     margin: 0 auto;
 }
 
-/* The “another-large-image” behind the .icon-section */
+
 .another-large-image {
     background: url('desktop-final-second-background.png') no-repeat center top;
     background-size: cover;
@@ -600,14 +600,14 @@ body {
 
 @media (max-width: 600px) {
 
-    /* Hide the desktop images */
+ 
     .large-background,
     .another-large-image,
     .third-large-image {
         display: none;
     }
 
-    /* Reposition the GIFs for mobile */
+  
     .floating-gif {
         top: 515px;
         left: 170px;
@@ -615,14 +615,14 @@ body {
         height: 150px;
     }
     .burningflag {
-        top: 1745.5px; /* adjust to your needs */
+        top: 1745.5px; 
         left: 40px;
         width: 95px;
         height: 95px;
     }
 }
 
-/* Hide mobile images by default */
+
 .large-background-mobile,
 .another-large-image-mobile,
 .third-large-image-mobile {
@@ -632,7 +632,7 @@ body {
 
 
 
-/* Max width 376px */
+
 @media (max-width: 376px) {
     .floating-gif {
         top: 518px;
@@ -649,7 +649,7 @@ body {
     }
 }
 
-/* Min width 377px and max width 395px */
+
 @media (min-width: 377px) and (max-width: 395px) {
     .floating-gif {
         top: 583px;
@@ -666,7 +666,7 @@ body {
     }
 }
 
-/* Min width 396px and max width 440px */
+
 @media (min-width: 396px) and (max-width: 440px) {
     .floating-gif {
         top: 764px;
@@ -683,7 +683,7 @@ body {
     }
 }
 
-/* Min width 441px and max width 768px */
+
 @media (min-width: 441px) and (max-width: 768px) {
     .floating-gif {
         top: 600px;
@@ -702,80 +702,79 @@ body {
 
 
 
-/* Erst mal sicherstellen, dass Desktop-Bilder ausgeblendet sind,
-   wenn du für Mobile separate Hintergründe benutzt */
+
 
    @media (max-width: 600px) {
     .large-background,
     .another-large-image {
-        display: none; /* Desktop-Hintergründe ausblenden */
+        display: none; 
     }
 
-    /* 1. Hintergrund: 375 x 4000 px */
+
     .mobile-bg-1 {
         background: url("mobile-new-main-background.png") no-repeat center top;
-        background-size: cover; /* oder contain, je nach gewünschtem Effekt */
+        background-size: cover; 
         width: 375px;
         height: 4000px;
-        margin: 0 auto; /* Zentriert es horizontal */
+        margin: 0 auto; 
     }
 
-    /* 2. Hintergrund: 375 x 1250 px */
+    
     .mobile-bg-2 {
         background: url("mobile-new-second-background.png") no-repeat center top;
         background-size: cover;
         width: 375px;
         height: 1250px;
         margin: 0 auto;
-        padding-bottom: 0; /* Remove padding-bottom */
+        padding-bottom: 0; 
     }
 
-    /* 3. Hintergrund: 375 x 200 px */
+   
     .mobile-bg-3 {
         background: url("mobile-new-third-background.png") no-repeat center top;
         background-size: cover;
         width: 375px;
         height: 200px;
-        margin: 60px auto 0 auto; /* Add margin to the top only */
-        padding-top: 20px; /* Add padding to the top if needed */
+        margin: 60px auto 0 auto; 
+        padding-top: 20px; 
   
         
     }
 }
 
 .icon-section {
-    /* Im normalen Flow: z.B. zentriert, Abstand nach oben/unten */
+   
     margin: 0rem auto;
     text-align: center;
-    max-width: 1920px; /* falls gewünscht */
-    background-color: #000000; /* Schwarzer Hintergrund */
+    max-width: 1920px; 
+    background-color: #000000; 
     z-index: 2147483646;
-    position: relative; /* Positionierung relativ zum übergeordneten Element */
-    top: 700px; /* Abstand nach unten erhöhen */
-    /* Optional: padding, etc. */
+    position: relative; 
+    top: 700px; 
+ 
 }
 
 .icon-grid {
     display: grid;
-    /* Die Spalten: repeat(auto-fill, minmax(150/200/220px, 1fr)) nach Geschmack */
+  
     grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
-    /* Gap für die Spalten- und Zeilenabstände */
+
     gap: 0.2rem;
-    row-gap: 0.1rem; /* Verringerte row-gap */
+    row-gap: 0.1rem; 
     justify-items: center;
     align-items: center;
     
-    /* Für zentrierten Block */
+ 
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .icon-card {
-    /* Gewünschtes Hover-Verhalten usw. */
+
     transition: transform 0.3s ease;
-    max-width: 1; /* Begrenze die maximale Breite */
-    max-height: 100%; /* Begrenze die maximale Höhe */
-    z-index: 2147483647; /* Höchstmöglicher z-index-Wert */
+    max-width: 1;
+    max-height: 100%; 
+    z-index: 2147483647; 
 }
 
 .icon-card:hover {
@@ -789,20 +788,20 @@ body {
     object-fit: contain;
 }
 
-/* Media Queries */
 
-/* Max width 376px */
+
+
 @media (max-width: 376px) {
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 0.1rem; /* Adjust row-gap for small screens */
+        row-gap: 0.1rem; 
     }
 
     .mobile-bg-1,
     .mobile-bg-2,
     .mobile-bg-3 {
         
-        left: 0px; /* Adjust as needed */
+        left: 0px; 
     }
 
     .mobile-bg-1 {
@@ -824,9 +823,9 @@ body {
     }
 
     .icon-section {
-        margin-top: 0px; /* Adjust as needed */
-        padding-top: 0px; /* Adjust as needed */
-        top: 0px; /* Adjust as needed */
+        margin-top: 0px; 
+        padding-top: 0px; 
+        top: 0px; 
         overflow-x: hidden;
         margin-right: -0px;
     }
@@ -839,18 +838,18 @@ body {
     }
 }
 
-/* Min width 378px and max width 395px */
+
 @media (min-width: 378px) and (max-width: 395px) {
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 0.1rem; /* Adjust row-gap for medium-small screens */
+        row-gap: 0.1rem; 
     }
 
     .mobile-bg-1,
     .mobile-bg-2,
     .mobile-bg-3 {
         transform: scale(1.0411);
-        left: 15px; /* Adjust as needed */
+        left: 15px; 
     }
 
     .mobile-bg-1 {
@@ -874,9 +873,9 @@ body {
     }
 
     .icon-section {
-        margin-top: 0px; /* Adjust as needed */
-        padding: 0px; /* Adjust as needed */
-        top: 0px; /* Adjust as needed */
+        margin-top: 0px; 
+        padding: 0px; 
+        top: 0px; 
     }
 
     .icon-card img {
@@ -887,18 +886,18 @@ body {
     }
 }
 
-/* Min width 396px and max width 440px */
+
 @media (min-width: 396px) and (max-width: 440px) {
     .icon-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 0.5rem; /* Adjust row-gap for medium screens */
+        row-gap: 0.5rem; 
     }
 
     .mobile-bg-1,
     .mobile-bg-2,
     .mobile-bg-3 {
         transform: scale(1.141);
-        left: 00px; /* Adjust as needed */
+        left: 00px; 
     }
 
     .mobile-bg-1 {
@@ -929,9 +928,9 @@ body {
     }
 
     .icon-section {
-        margin-top: 0px; /* Adjust as needed */
-        padding: 0px; /* Adjust as needed */
-        top: 0px; /* Adjust as needed */
+        margin-top: 0px; 
+        padding: 0px; 
+        top: 0px; 
         left: 0px;
         width: 430px;
         
@@ -945,18 +944,18 @@ body {
     }
 }
 
-/* Tablet view */
+
 @media (min-width: 441px) and (max-width: 768px) {
     .icon-grid {
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 1rem; /* Adjust row-gap for tablet screens */
+        row-gap: 1rem; 
     }
 
     .mobile-bg-1,
     .mobile-bg-2,
     .mobile-bg-3 {
         transform: scale(1.25);
-        left: 25px; /* Adjust as needed */
+        left: 25px; 
     }
 
     .mobile-bg-1 {
@@ -978,24 +977,24 @@ body {
     }
 
     .icon-section {
-        margin-top: 70px; /* Adjust as needed */
-        padding: 25px; /* Adjust as needed */
-        top: 110px; /* Adjust as needed */
+        margin-top: 70px; 
+        padding: 25px; 
+        top: 110px; 
     }
 }
 
-/* Desktop view */
+
 @media (min-width: 769px) {
     .icon-grid {
         grid-template-columns: repeat(5, 1fr);
-        row-gap: 1.5rem; /* Adjust row-gap for desktop screens */
+        row-gap: 1.5rem; 
     }
 
     .mobile-bg-1,
     .mobile-bg-2,
     .mobile-bg-3 {
         transform: scale(1.25);
-        left: 30px; /* Adjust as needed */
+        left: 30px; 
     }
 
     .mobile-bg-1 {
@@ -1018,17 +1017,17 @@ body {
     }
 
     .icon-section {
-        margin-top: 80px; /* Adjust as needed */
-        padding: 30px; /* Adjust as needed */
-        top: 250px; /* Adjust as needed */
+        margin-top: 80px; 
+        padding: 30px; 
+        top: 250px; 
     }
 }
 
 
 
-/* Countdown Timer Styling */
+
 .countdown-container {
-    display: none; /* Hide by default */
+    display: none; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1046,13 +1045,13 @@ body {
 
 .countdown-timer {
     color: red;
-    font-size: 2rem; /* Increase the font size for the numbers */
+    font-size: 2rem; 
     font-weight: bold;
 }
 
-/* Countdown Timer Styling for Mobile */
+
 .countdown-container-mobile {
-    display: none; /* Hide by default */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1066,12 +1065,12 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: -18px; /* Adjust as needed */
-        left: 110px; /* Adjust as needed */
+        top: -18px; 
+        left: 110px; 
     }
 
     .countdown-timer {
-        font-size: 1rem; /* Adjust the font size for the numbers */
+        font-size: 1rem; 
     }
 }
 
@@ -1079,11 +1078,11 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: -70px; /* Adjust as needed */
-        left: 115px; /* Adjust as needed */
+        top: -70px; 
+        left: 115px; 
     }
     .countdown-timer {
-        font-size: 1rem; /* Adjust the font size for the numbers */
+        font-size: 1rem; 
     }
 }
 
@@ -1091,19 +1090,19 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: -140px; /* Adjust as needed */
-        left: 65px; /* Adjust as needed */
+        top: -140px;
+        left: 65px; 
     }
     .countdown-timer {
-        font-size: 2rem; /* Adjust the font size for the numbers */
+        font-size: 2rem; 
     }
 }
 @media (min-width: 441px) and (max-width: 768px) {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: 160px; /* Adjust as needed */
-        left: 50px; /* Adjust as needed */
+        top: 160px; 
+        left: 50px;
     }
 }
 
@@ -1157,7 +1156,7 @@ body {
   }
   
   .mobile-nav-links {
-    display: none; /* erst ausklappen via .active */
+    display: none; 
     flex-direction: column;
     margin: 0; padding: 0;
     list-style: none;
@@ -1179,12 +1178,12 @@ body {
   }
   .mobile-presale-countdown .countdown-text,
   .mobile-presale-countdown #countdown-mobile-presale {
-    color: black; /* z. B. schwarz */
+    color: black; 
     
   }
   
   .navbar-mobile {
-    position: relative; /* Container muss "relative" sein, damit UL "absolute" positioniert werden kann */
+    position: relative; 
     
   }
   
@@ -1194,12 +1193,12 @@ body {
     top: 60px;
     left: 0;
     width: 100%;
-    height: 470px;       /* fester Wert */
+    height: 470px;      
     background-color: #08d0e4;
     z-index: 9999;
     flex-direction: column;
     margin: 0; padding: 0;
-    overflow-y: auto;    /* scrollbar, falls mehr Links als 400px Platz */
+    overflow-y: auto;    
   }
   
 
@@ -1207,7 +1206,7 @@ body {
     width: 60px;
     height: 60px;
     position: relative;
-    z-index: 1; /* damit es über dem Decor liegt */
+    z-index: 1; 
 }
 
 .nav-logo-decor-mobile {
@@ -1225,7 +1224,7 @@ body {
 }
 
 .countdown-container-mobile {
-    display: none; /* Hide by default */
+    display: none; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1236,28 +1235,28 @@ body {
 }
 
 .mobile-hamburger {
-    margin-right: 10px; /* oder so */
+    margin-right: 10px; 
     position: absolute;
     z-index: 999999;
 }
 
 .mobile-nav-icons {
     gap: 10px;
-    position: absolute; /* Ensure the element is absolutely positioned */
+    position: absolute; 
     margin-right: 5px;
     height: 100px;
     width: 180px;
 }
 
 .mobile-nav-icons img {
-    width: 150px; /* Default value */
-    height: 250px; /* Default value */
+    width: 150px; 
+    height: 250px; 
 }
 
-/* ========== 1) max-width: 376px ========== */
+
 @media (max-width: 376px) {
     .nav-logo-wrapper-mobile {
-        width: 75px;  /* z.B. kleiner */
+        width: 75px;  
         height: 75px;
         margin-left: 5px;
         left: 10px;
@@ -1278,14 +1277,14 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: 70px; /* Adjust as needed */
-        left: 205px; /* Adjust as needed */
+        top: 70px; 
+        left: 205px; 
     }
 
     .mobile-hamburger {
         margin-right: 5px; 
         right: 25px;
-        /* ggf. noch width/height anpassen, falls du willst */
+     
     }
 
     .mobile-nav-icons {
@@ -1297,30 +1296,30 @@ body {
     }
 
     .mobile-nav-icons img {
-        width: 50px; /* Adjust as needed */
-        height: 50px; /* Adjust as needed */
+        width: 50px; 
+        height: 50px; 
         top: -50px;
     }
 
     .floating-gif {
-        top: 487px; /* Adjust as needed */
-        left: 170px; /* Adjust as needed */
-        width: 150px; /* Adjust as needed */
-        height: 150px; /* Adjust as needed */
+        top: 487px; 
+        left: 170px; 
+        width: 150px; 
+        height: 150px; 
     }
 
     .burningflag {
-        top: 1115px; /* Adjust as needed */
-        left: 20px; /* Adjust as needed */
-        width: 90px; /* Adjust as needed */
-        height: 90px; /* Adjust as needed */
+        top: 1115px; 
+        left: 20px; 
+        width: 90px; 
+        height: 90px; 
     }
 }
 
-/* ========== 2) min-width: 377px and max-width: 395px ========== */
+
 @media (min-width: 377px) and (max-width: 395px) {
     .nav-logo-wrapper-mobile {
-        width: 55px;  /* minimal größer */
+        width: 55px;  
         height: 55px;
         margin-left: 8px;
         right: -20px;
@@ -1343,8 +1342,8 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: -40px; /* Adjust as needed */
-        left: 200px; /* Adjust as needed */
+        top: -40px; 
+        left: 200px; 
     }
 
     .mobile-hamburger {
@@ -1362,30 +1361,30 @@ body {
     }
 
     .mobile-nav-icons img {
-        width: 50px; /* Adjust as needed */
-        height: 50px; /* Adjust as needed */
+        width: 50px; 
+        height: 50px; 
         top: -50px;
     }
 
     .floating-gif {
-        top: 533px; /* Adjust as needed */
-        left: 175px; /* Adjust as needed */
-        width: 160px; /* Adjust as needed */
-        height: 160px; /* Adjust as needed */
+        top: 533px; 
+        left: 175px; 
+        width: 160px; 
+        height: 160px; 
     }
 
     .burningflag {
-        top: 1196px; /* Adjust as needed */
-        left: 150px; /* Adjust as needed */
-        width: 100px; /* Adjust as needed */
-        height: 100px; /* Adjust as needed */
+        top: 1196px; 
+        left: 150px; 
+        width: 100px; 
+        height: 100px; 
     }
 }
 
-/* ========== 3) min-width: 396px and max-width: 440px ========== */
+
 @media (min-width: 396px) and (max-width: 440px) {
     .nav-logo-wrapper-mobile {
-        width: 55px;  /* minimal größer */
+        width: 55px;  
         height: 55px;
         margin-left: 8px;
         right: -20px;
@@ -1408,8 +1407,8 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: -120px; /* Adjust as needed */
-        left: 70px; /* Adjust as needed */
+        top: -120px; 
+        left: 70px; 
     }
 
     .mobile-hamburger {
@@ -1427,27 +1426,27 @@ body {
     }
 
     .mobile-nav-icons img {
-        width: 60px; /* Adjust as needed */
-        height: 60px; /* Adjust as needed */
+        width: 60px; 
+        height: 60px; 
         top: -50px;
     }
 
     .floating-gif {
-        top: 708px; /* Adjust as needed */
-        left: 185px; /* Adjust as needed */
-        width: 180px; /* Adjust as needed */
-        height: 180px; /* Adjust as needed */
+        top: 708px; 
+        left: 185px; 
+        width: 180px; 
+        height: 180px; 
     }
 
     .burningflag {
-        top: 1442px; /* Adjust as needed */
-        left: 150px; /* Adjust as needed */
-        width: 100px; /* Adjust as needed */
-        height: 100px; /* Adjust as needed */
+        top: 1442px; 
+        left: 150px; 
+        width: 100px; 
+        height: 100px; 
     }
 }
 
-/* ========== 4) min-width: 441px and max-width: 768px ========== */
+
 @media (min-width: 441px) and (max-width: 768px) {
     .nav-logo-wrapper-mobile {
         width: 65px;
@@ -1468,8 +1467,8 @@ body {
     .countdown-container-mobile {
         display: flex;
         position: absolute;
-        top: 160px; /* Adjust as needed */
-        left: 50px; /* Adjust as needed */
+        top: 160px; 
+        left: 50px; 
     }
 
     .mobile-hamburger {
@@ -1478,49 +1477,47 @@ body {
 
     .mobile-nav-icons {
         gap: 15px;
-        /* oder .mobile-nav-icons img { width: 40px; height: 40px; } */
+    
     }
 
     .mobile-nav-icons img {
-        width: 45px; /* Adjust as needed */
-        height: 45px; /* Adjust as needed */
+        width: 45px; 
+        height: 45px; 
     }
 
     .floating-gif {
-        top: 40px; /* Adjust as needed */
-        left: 40px; /* Adjust as needed */
-        width: 110px; /* Adjust as needed */
-        height: 110px; /* Adjust as needed */
+        top: 40px; 
+        left: 40px; 
+        width: 110px; 
+        height: 110px; 
     }
 
     .burningflag {
-        top: 50px; /* Adjust as needed */
-        left: 50px; /* Adjust as needed */
-        width: 120px; /* Adjust as needed */
-        height: 120px; /* Adjust as needed */
+        top: 50px; 
+        left: 50px; 
+        width: 120px; 
+        height: 120px; 
     }
 }
 
-/* ...existing code... */
 
-/* ...existing code... */
+
+
 .footer {
-    /* Kannst du anpassen, wenn du für Mobile / Tablet
-       einen anderen Hintergrund oder Padding willst. */
-    background-color: #000000; /* z. B. dunkles Grau */
-    /* KEINE feste Höhe hier! Das machen wir erst ab Desktop */
+   
+      
+    background-color: #000000; 
+  
     color: #fff;
-    padding: 0px; /* z. B. ein kleines Padding für Mobile */
+    padding: 0px; 
     box-sizing: border-box;
-    text-align: center; /* Standard-Ausrichtung */
+    text-align: center; 
 
   }
 
   @media (min-width: 1285px) {
 
-    /* ========================
-       1) FOOTER-GRUNDLAGEN
-       ======================== */
+
     footer.footer {
       position: relative !important;
       top: auto !important;
@@ -1529,38 +1526,33 @@ body {
       width: 100% !important;
       height: 320px !important;
       overflow: hidden !important;
-      background: none !important;  /* Weil du ja ein Hintergrundbild als <img> hast */
+      background: none !important;  
     }
   
     .footer-container {
       position: relative !important;
       width: 100% !important;
-      height: 100% !important; /* 320px */
+      height: 100% !important; 
       margin: 0 auto !important;
       text-align: center !important;
     }
   
-    /* ========================
-       2) HINTERGRUND-BILD
-       ======================== */
+
     .footer-background {
       position: absolute !important;
       background-color: #000;
       top: 0 !important;
       left: 0 !important;
       width: 100% !important;
-      height: 100% !important; /* = 320px */
+      height: 100% !important; 
       z-index: 23213232;
       margin: 0 !important;
       padding: 0 !important;
       object-fit: cover !important; 
-      /* (object-fit unterstützt <img> in modernen Browsern, 
-         sonst ggf. Hintergrundbild via CSS) */
+
     }
   
-    /* ========================
-       3) LINKS
-       ======================== */
+
     .footer-links {
       position: absolute !important;
       z-index: 42424242;
@@ -1569,7 +1561,7 @@ body {
       transform: translateX(-50%) !important;
       
       display: flex !important;
-      gap: 150px !important;     /* Abstand zwischen Links */
+      gap: 150px !important;     
       list-style: none !important;
       margin: 0 !important;
       padding: 0 !important;
@@ -1589,9 +1581,7 @@ body {
       color: #ffcc00 !important;
     }
   
-    /* ========================
-       4) DISCLAIMER
-       ======================== */
+
     .footer-disclaimer {
       position: absolute !important;
       z-index: 3 !important;
@@ -1599,8 +1589,8 @@ body {
       left: 50% !important;
       transform: translateX(-50%) !important;
   
-      width: 100%!important;        /* oder 100%, je nach Bedarf */
-      max-width: 1920px !important; /* optional, um eine Obergrenze zu setzen */
+      width: 100%!important;       
+      max-width: 1920px !important; 
       margin: 0 !important;
       padding: 10px !important;
       box-sizing: border-box !important;
@@ -1622,22 +1612,19 @@ body {
       z-index: 312313213;
     }
   
-    /* ========================
-       5) THIRD LARGE IMAGE
-       ======================== */
+
     .third-large-image {
-      /* Bleibt ganz normal im Fluss, 
-         sofern du kein absolutes Positioning nutzt */
+
       position: relative !important; 
       top: auto !important;
       left: auto !important;
   
       width: 100% !important;
-      height: 800px !important;  /* oder auto, je nach Inhalt */
-      margin: 200px 0 0 0 !important; /* Abstand nach oben, falls gewünscht */
+      height: 800px !important;  
+      margin: 200px 0 0 0 !important; 
       z-index: 1000000;
   
-      /* Hintergrund */
+
       background: url('desktop-final-third-background.png') 
                   no-repeat center top !important;
       background-size: cover !important;
@@ -1651,24 +1638,24 @@ body {
         height: 320px;
         top: 296px;
         left: 530px;
-        position: absolute !important; /* Sicherstellen der absoluten Positionierung */
-        z-index: 100000 !important; /* Über anderen Elementen platzieren */
+        position: absolute !important; 
+        z-index: 100000 !important;
     }
 
     .burningflag {
         width:300px;
         height: 300px;
         top: 1055px;
-        left: 50px !important;      /* Angepasstes Left */
-        position: absolute !important; /* Sicherstellen der absoluten Positionierung */
-        z-index: 100000 !important; /* Über anderen Elementen platzieren */
+        left: 50px !important;     
+        position: absolute !important; 
+        z-index: 100000 !important; 
     }
 
 }
   
   
   
-/* Tablet and Mobile Footer */
+
 @media (max-width: 1300px) {
     .footer {
         background-color: #000000;
@@ -1676,22 +1663,22 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 0;
-        margin-bottom: 0; /* Entferne den negativen Margin */
-        height: auto; /* Höhe automatisch anpassen */
+        margin-bottom: 0; 
+        height: auto;
     }
 
     .footer-background {
-        display: none; /* Hintergrundbild auf mobilen Geräten ausblenden */
+        display: none; 
     }
 
     .footer-links {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Reduzierter Abstand zwischen den Links */
-        padding: 0; /* Entferne Padding */
-        margin: 0; /* Entferne Margin */
-        position: static; /* Stelle sicher, dass keine absolute Positionierung angewendet wird */
+        gap: 10px; 
+        padding: 0; 
+        margin: 0; 
+        position: static; 
     }
 
     .footer-links li {
@@ -1701,7 +1688,7 @@ body {
     .footer-links a {
         color: white;
         text-align: center;
-        /* Optional: Füge eine maximale Breite hinzu, um die Links besser zu steuern */
+
         max-width: 200px;
         width: 100%;
     }
@@ -1709,24 +1696,24 @@ body {
     .footer-disclaimer {
         color: white;
         font-size: 0.8rem;
-        margin-top: 0; /* Entferne den oberen Margin */
+        margin-top: 0; 
         text-align: center;
-        padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
-        width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
-        box-sizing: border-box; /* Inkludiere Padding in der Breite */
-        position: relative; /* Position relativ setzen */
+        padding: 10px 20px; 
+        width: 100%;
+        box-sizing: border-box; 
+        position: relative; 
     }
 
-    /* Ensure the icon-section remains unchanged */
+
 .icon-section {
-    margin-top: 120px; /* Anpassung des oberen Abstands nach Bedarf */
+    margin-top: 120px; 
     display: flex;
     justify-content: center;
-    gap: 10px; /* Abstand zwischen den Icons */
+    gap: 10px; 
 }
 }
 
-/* Tablet-Special: 601–809px */
+
 @media (min-width: 601px) and (max-width: 809px) {
     .navbar {
         padding: 20px 40px;
@@ -1747,7 +1734,7 @@ body {
         z-index: 100500;
     }
     .nav-logo img {
-        width: 90px; /* Beispiel */
+        width: 90px; 
         height: 90px;
         z-index: 10005050;
         
@@ -1796,7 +1783,7 @@ body {
         left: 40px;
     }
 
-    /* Hide Desktop & Mobile backgrounds */
+ 
     .large-background,
     .another-large-image,
     .third-large-image,
@@ -1807,7 +1794,7 @@ body {
         display: none !important;
     }
 
-    /* Tablet-Hintergründe */
+
     .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
         display: block;
         margin: 0 auto;
@@ -1830,7 +1817,7 @@ body {
         height: 350px;
     }
 
-    /* Icon-Section */
+
     .icon-section {
         margin-top: 0;
         top: 0;
@@ -1853,21 +1840,21 @@ body {
         align-items: center;
         padding: 0;
         margin-bottom: 0;
-        height: auto; /* Höhe automatisch anpassen */
+        height: auto; 
     }
 
     .footer-background {
-        display: none; /* Hintergrundbild auf mobilen Geräten ausblenden */
+        display: none;
     }
 
     .footer-links {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Reduzierter Abstand zwischen den Links */
-        padding: 0; /* Entferne Padding */
-        margin: 0; /* Entferne Margin */
-        position: static; /* Stelle sicher, dass keine absolute Positionierung angewendet wird */
+        gap: 10px; 
+        padding: 0; 
+        margin: 0;
+        position: static; 
     }
 
     .footer-links li {
@@ -1877,7 +1864,6 @@ body {
     .footer-links a {
         color: white;
         text-align: center;
-        /* Optional: Füge eine maximale Breite hinzu, um die Links besser zu steuern */
         max-width: 200px;
         width: 100%;
     }
@@ -1887,32 +1873,32 @@ body {
     font-size: 0.8rem;
     margin-bottom: -0px;
     text-align: center;
-    padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
-    width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
-    box-sizing: border-box; /* Inkludiere Padding in der Breite */
-    position: relative; /* Position relativ setzen */
+    padding: 10px 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+    position: relative; 
 }
 
 .footer-disclaimer p {
-    margin: 0; /* Entferne Standard-Margin */
+    margin: 0; 
     margin-top: -150px;
    
-    padding: 0; /* Entferne Standard-Padding */
-    color: white; /* Textfarbe sicherstellen */
-    display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
-    visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
-    width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
-    height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+    padding: 0; 
+    color: white; 
+    display: block;
+    visibility: visible; 
+    width: 100%; 
+    height: auto; 
 }
 }
 
-/* Tablet-Special: 810–1000px */
+
 @media (min-width: 810px) and (max-width: 1000px) {
     body {
         transform: scale(1.08);
-        transform-origin: top center; /* Skalierung vom oberen Zentrum aus */
-        width: 100vw; /* Volle Breite */
-        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        transform-origin: top center; 
+        width: 100vw;
+        overflow-x: hidden; 
     }
 
     .navbar {
@@ -1927,7 +1913,7 @@ body {
         left: -100px;
     }
     .nav-logo-decor {
-        width: 75px; /* Beispiel */
+        width: 75px; 
         height: 75px;
     }
     .nav-logo img {
@@ -1989,7 +1975,7 @@ body {
         height: 150px;
     }
 
-    /* Hide Desktop & Mobile backgrounds */
+ 
     .large-background,
     .another-large-image,
     .third-large-image,
@@ -2000,7 +1986,7 @@ body {
         display: none !important;
     }
 
-    /* Tablet-Hintergründe */
+   
     .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
         display: block;
         margin: 0 auto;
@@ -2023,7 +2009,7 @@ body {
         height: 350px;
     }
 
-    /* Icon-Section */
+  
     .icon-section {
         margin-top: -50px;
         top: 0;
@@ -2042,18 +2028,18 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: row; /* Horizontale Ausrichtung */
-    flex-wrap: nowrap; /* Kein Umbruch */
+    flex-direction: row; 
+    flex-wrap: nowrap; 
     justify-content: center;
-    gap: 30px; /* Abstand zwischen den Links */
-    width: 100%; /* Volle Breite */
-    height: auto; /* Höhe automatisch anpassen */
+    gap: 30px; 
+    width: 100%; 
+    height: auto; 
     margin-top: -10px;
    
 }
 .footer-links li {
-    display: inline-block; /* Sicherstellen, dass die Listenelemente inline-block sind */
-    text-align: center; /* Zentriert den Text innerhalb der Listenelemente */
+    display: inline-block; 
+    text-align: center; 
 }
 
 .footer-links a {
@@ -2070,33 +2056,33 @@ body {
     .footer-disclaimer {
         color: white;
         font-size: 0.6rem;
-        margin-top: 0; /* Entferne den oberen Margin */
+        margin-top: 0; 
         text-align: center;
-        padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
-        width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
-        box-sizing: border-box; /* Inkludiere Padding in der Breite */
-        position: relative; /* Position relativ setzen */
+        padding: 10px 20px; 
+        width: 100%; 
+        box-sizing: border-box;
+        position: relative; 
     }
     
     .footer-disclaimer p {
-        margin: 0; /* Entferne Standard-Margin */
+        margin: 0; 
         margin-top: 10px;
         margin-bottom: 330px;
-        padding: 0; /* Entferne Standard-Padding */
-        color: rgb(245, 248, 55); /* Textfarbe sicherstellen */
-        display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
-        visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
-        width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
-        height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+        padding: 0; 
+        color: rgb(245, 248, 55); 
+        display: block; 
+        visibility: visible; 
+        width: 100%; 
+        height: auto; 
     }
     
-/* Tablet-Special: 1001–1200px */
+
 @media (min-width: 1001px) and (max-width: 1200px) {
     body {
         transform: scale(1.34);
-        transform-origin: top center; /* Skalierung vom oberen Zentrum aus */
-        width: 100vw; /* Volle Breite */
-        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        transform-origin: top center; 
+        width: 100vw; 
+        overflow-x: hidden; 
     }
     .navbar {
         padding: 20px 40px;
@@ -2110,7 +2096,7 @@ body {
         height: 50px;
     }
     .nav-logo-decor {
-        width: 50px; /* Beispiel */
+        width: 50px; 
         height: 50px;
         left: -10px;
         
@@ -2120,7 +2106,7 @@ body {
         left: -240px;
     }
     .nav-logo img {
-        width: 90px; /* Beispiel */
+        width: 90px; 
         height: 90px;
         left: -50px;
     }
@@ -2183,7 +2169,7 @@ body {
         width: 175px;
     }
 
-    /* Hide Desktop & Mobile backgrounds */
+   
     .large-background,
     .another-large-image,
     .third-large-image,
@@ -2194,7 +2180,7 @@ body {
         display: none !important;
     }
 
-    /* Tablet-Hintergründe */
+  
     .tablet-bg-1, .tablet-bg-2, .tablet-bg-3 {
         display: block;
         margin: 0 auto;
@@ -2219,7 +2205,7 @@ body {
 
 
 
-/* Icon-Section */
+
 .icon-section {
     margin-top: -50px;
     top: 0;
@@ -2238,18 +2224,18 @@ list-style: none;
 padding: 0;
 margin: 0;
 display: flex;
-flex-direction: row; /* Horizontale Ausrichtung */
-flex-wrap: nowrap; /* Kein Umbruch */
+flex-direction: row; 
+flex-wrap: nowrap; 
 justify-content: center;
-gap: 30px; /* Abstand zwischen den Links */
-width: 100%; /* Volle Breite */
-height: auto; /* Höhe automatisch anpassen */
+gap: 30px; 
+width: 100%; 
+height: auto; 
 margin-top: -10px;
 
 }
 .footer-links li {
-display: inline-block; /* Sicherstellen, dass die Listenelemente inline-block sind */
-text-align: center; /* Zentriert den Text innerhalb der Listenelemente */
+display: inline-block; 
+text-align: center; 
 }
 
 .footer-links a {
@@ -2266,56 +2252,54 @@ color: #ffcc00;
 .footer-disclaimer {
     color: white;
     font-size: 0.6rem;
-    margin-top: 0; /* Entferne den oberen Margin */
+    margin-top: 0; 
     text-align: center;
-    padding: 10px 20px; /* Padding hinzufügen, um Platz zu schaffen */
-    width: 100%; /* Stelle sicher, dass der Disclaimer die volle Breite einnimmt */
-    box-sizing: border-box; /* Inkludiere Padding in der Breite */
-    position: relative; /* Position relativ setzen */
+    padding: 10px 20px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    position: relative; 
 }
 
 .footer-disclaimer p {
-    margin: 0; /* Entferne Standard-Margin */
+    margin: 0; 
     margin-top: 10px;
     margin-bottom: 450px;
-    padding: 0; /* Entferne Standard-Padding */
-    color: rgb(245, 248, 55); /* Textfarbe sicherstellen */
-    display: block; /* Sicherstellen, dass das <p> Element als Block angezeigt wird */
-    visibility: visible; /* Sicherstellen, dass das <p> Element sichtbar ist */
-    width: 100%; /* Stelle sicher, dass das <p> Element die volle Breite einnimmt */
-    height: auto; /* Stelle sicher, dass das <p> Element die Höhe automatisch anpasst */
+    padding: 0; 
+    color: rgb(245, 248, 55); 
+    display: block; 
+    visibility: visible; 
+    width: 100%; 
+    height: auto; 
 }
 
 }
 
-/* ======================================
-   FUSSTEIL (FOOTER) - NUR FÜR MOBILE
-   ====================================== */
+
    @media (max-width: 600px) {
 
-    /* 1) Footer selbst: keine feste Höhe, kein Hintergrundbild */
+
     .footer {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
-      justify-content: flex-start !important; /* oder center, je nach Geschmack */
+      justify-content: flex-start !important; 
       padding: 0 !important;
       margin: 0 !important;
-      height: auto !important; /* passt sich dem Inhalt an */
-      background: #000 !important; /* wenn du’s Schwarz haben willst */
+      height: auto !important; 
+      background: #000 !important; 
     }
   
-    /* 2) Hintergrundbild ausblenden */
+
     .footer-background {
       display: none !important;
     }
   
-    /* 3) Links vertikal statt horizontal */
+  
     .footer-links {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
-      gap: 10px !important; /* Abstand zwischen Links */
+      gap: 10px !important; 
       list-style: none !important;
       margin: 10px 0 !important;
       padding: 0 !important;
@@ -2323,7 +2307,7 @@ color: #ffcc00;
       width: auto !important;
     }
     .footer-links li {
-      display: block !important; /* jeder Link block-weit */
+      display: block !important; 
       width: 100% !important;
       text-align: center !important;
     }
@@ -2334,9 +2318,9 @@ color: #ffcc00;
       font-weight: bold !important;
     }
   
-    /* 4) Disclaimer einfach unter den Links, vollbreit */
+ 
     .footer-disclaimer {
-      position: static !important;   /* kein absolute */
+      position: static !important;  
       width: 100% !important;
       margin: 0 auto !important;
       padding: 10px 20px !important;
@@ -2350,15 +2334,15 @@ color: #ffcc00;
       margin: 0 !important;
       padding: 0 !important;
       color: rgb(245, 248, 55) !important; 
-      line-height: 1.4 !important; /* etwas angenehmer zu lesen */
+      line-height: 1.4 !important; 
     }
-  /* 5) Icon-Section: margin-top steuerbar */
+
   .icon-section {
     margin-top: -20px;
   }
 }
 
 .mobile-nav-icons a {
-    text-decoration: none; /* oder none !important; */
+    text-decoration: none; 
   }
   
